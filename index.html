@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciscode - Desarrollo a la Medida</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/icono.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/youtube.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="fixed-top">
+        <!-- Top Info Bar -->
+        <div class="header-info">
+            <div class="container">
+                <div class="header-info-content">
+                    <div class="header-contact-info">
+                        <a href="tel:+573006957308" class="header-contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+57 300 695 7308</span>
+                        </a>
+                        <a href="mailto:cristiancano1236@gmail.com" class="header-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>cristiancano1236@gmail.com</span>
+                        </a>
+                    </div>
+                    <div class="header-social-links">
+                        <a href="https://www.instagram.com/cristiancano1236" target="_blank" class="header-social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@ciscodedev" target="_blank" class="header-social-link">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@Ciscodedev" target="_blank" class="header-social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                         <a href="https://github.com/Cristiancano1236" target="_blank" class="header-social-link">
+                             <i class="fab fa-github"></i>
+                         </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light header-new">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo.jpg" alt="Ciscode Logo" height="50">
+                    <span class="d-none d-lg-inline" data-i18n="brand.tagline">Desarrollo Web Profesional</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <!-- Modern language toggle -->
+                        <li class="nav-item d-flex align-items-center ms-2">
+                            <div class="btn-group btn-group-sm lang-toggle" role="group" aria-label="Language switcher">
+                                <button type="button" class="btn btn-outline-primary" data-set-lang="es">🇨🇴 ES</button>
+                                <button type="button" class="btn btn-outline-primary" data-set-lang="en">🇺🇸 EN</button>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">
+                                <i class="fas fa-user me-1"></i><span data-i18n="nav.about">Sobre mí</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#portfolio">
+                                <i class="fas fa-laptop-code me-1"></i><span data-i18n="nav.services">Servicios</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tech">
+                                <i class="fas fa-code me-1"></i><span data-i18n="nav.stack">Stack</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">
+                                <i class="fas fa-envelope me-1"></i><span data-i18n="nav.contact">Contacto</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section section-bg">
+        <div class="container">
+            <div class="row min-vh-100 align-items-center">
+                <div class="col-lg-6">
+                    <div class="promo-content">
+                            <div class="hero-badge">
+                                <i class="fas fa-star-half-alt"></i>
+                                <span data-i18n="hero.badge">Diseño Web Profesional</span>
+                            </div>
+                            <h1 class="mega-title" data-i18n="hero.title_html" data-i18n-html="true">
+                                Impulsa tu Negocio con una<br>
+                                <span class="highlight-text">Página Web Única</span>
+                            </h1>
+                            <p class="hero-description" data-i18n="hero.desc">
+                                Creamos sitios web profesionales que destacan tu marca y atraen más clientes. 
+                                Diseño moderno, rápido y optimizado para todos los dispositivos.
+                            </p>
+                        <div class="price-showcase">
+                            <div class="price-card">
+                                <div class="price-header">
+                                     <span class="price-label" data-i18n="price.label">Precio Especial</span>
+                                    <span class="price-amount">$500.000</span>
+                                     <span class="price-period" data-i18n="price.period">Pago único</span>
+                                </div>
+                                <div class="price-features">
+                                    <div class="price-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                         <span data-i18n="price.f1">Diseño Personalizado</span>
+                                    </div>
+                                    <div class="price-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                         <span data-i18n="price.f2">Hosting por 1 año GRATIS</span>
+                                    </div>
+                                    <div class="price-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                         <span data-i18n="price.f3">Dominio .com incluido</span>
+                                    </div>
+                                    <div class="price-feature">
+                                        <i class="fas fa-check-circle"></i>
+                                         <span data-i18n="price.f4">Certificado SSL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-actions">
+                            <a href="https://wa.me/573006957308" target="_blank" class="cta-button">
+                                <i class="fab fa-whatsapp"></i>
+                                <span data-i18n="hero.cta">¡Solicita tu Cotización!</span>
+                            </a>
+                            <div class="hero-guarantee">
+                                <i class="fas fa-shield-alt"></i>
+                                <span data-i18n="hero.guarantee">100% Satisfacción Garantizada</span>
+                            </div>
+                        </div>
+                        <div class="hero-badges">
+                            <div class="tech-badge">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>100% Responsive</span>
+                            </div>
+                            <div class="tech-badge">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>Optimizado SEO</span>
+                            </div>
+                            <div class="tech-badge">
+                                <i class="fas fa-rocket"></i>
+                                <span>Alto Rendimiento</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="promo-illustration">
+                        <div class="floating-elements">
+                            <div class="device-mockup">
+                                <div class="screen">
+                                    <div class="screen-content">
+                                        <div class="browser-header">
+                                            <span class="dot"></span>
+                                            <span class="dot"></span>
+                                            <span class="dot"></span>
+                                        </div>
+                                        <div class="browser-body">
+                                            <div class="content-line"></div>
+                                            <div class="content-line"></div>
+                                            <div class="content-line short"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reflection"></div>
+                            </div>
+                            <div class="floating-element code">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="floating-element design">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <div class="floating-element responsive">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 section-bg about-section">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-5">
+                    <div class="about-photo-wrapper">
+                        <img src="img/foto-perfil.jpeg" alt="Cristian Cano - Desarrollador" class="img-fluid rounded-4 shadow-lg about-photo">
+                        <span class="about-photo-glow"></span>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <span class="badge rounded-pill text-bg-primary mb-3" data-i18n="about.badge">Sobre mí</span>
+                    <h2 class="display-4 fw-bold mb-3" data-i18n="about.title">Hola, soy Cristian Cano</h2>
+                    <p class="lead text-secondary mb-4" data-i18n="about.desc">
+                        Desarrollador de software colombiano con más de 5 años de experiencia creando productos digitales a medida.
+                        Comparto contenido en YouTube para ayudar a otros a convertirse en desarrolladores web y construyo proyectos
+                        con un enfoque en rendimiento, accesibilidad y una excelente experiencia de usuario.
+                    </p>
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-6">
+                            <div class="about-meta">
+                                <i class="fas fa-flag"></i>
+                                <span data-i18n="about.nationality">Colombiano 🇨🇴</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="about-meta">
+                                <i class="fas fa-location-dot"></i>
+                                <span data-i18n="about.location">Medellín, Colombia</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="about-meta">
+                                <i class="fas fa-briefcase"></i>
+                                <span data-i18n="about.experience">+5 años de experiencia</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="about-meta">
+                                <i class="fas fa-video"></i>
+                                <span data-i18n="about.channel">Canal: @Ciscodedev</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-list mb-4">
+                        <span class="skill-badge"><i class="fab fa-html5"></i> HTML5</span>
+                        <span class="skill-badge"><i class="fab fa-css3-alt"></i> CSS3</span>
+                        <span class="skill-badge"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="skill-badge"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+                        <span class="skill-badge"><i class="fab fa-react"></i> React</span>
+                        <span class="skill-badge"><i class="fab fa-vuejs"></i> Vue</span>
+                        <span class="skill-badge"><i class="fab fa-node-js"></i> Node.js</span>
+                        <span class="skill-badge"><i class="fas fa-database"></i> MySQL / MongoDB</span>
+                    </div>
+
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="https://github.com/Cristiancano1236" target="_blank" class="btn btn-dark">
+                            <i class="fab fa-github me-2"></i><span data-i18n="about.github">GitHub</span>
+                        </a>
+                        <a href="https://www.youtube.com/@Ciscodedev" target="_blank" class="btn btn-danger">
+                            <i class="fab fa-youtube me-2"></i><span data-i18n="about.youtube">YouTube</span>
+                        </a>
+                        <a href="#trusted" class="btn btn-outline-primary">
+                            <i class="fas fa-briefcase me-2"></i><span data-i18n="about.projects">Ver proyectos</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="portfolio" class="py-5 section-bg">
+        <div class="container">
+            <div class="text-center mb-5">
+                    <span class="badge rounded-pill text-bg-primary mb-3" data-i18n="services.badge">Servicios</span>
+                    <h2 class="display-4 fw-bold mb-3" data-i18n="services.title">Nuestras Soluciones</h2>
+                    <p class="lead text-secondary" data-i18n="services.subtitle">Transformamos ideas en experiencias digitales excepcionales</p>
+            </div>
+            <div class="row g-4">
+                <!-- Sitios Web -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-card-inner">
+                            <div class="service-card-front">
+                                <div class="service-icon">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <h3 data-i18n="services.card1.title">Sitios Web</h3>
+                                <div class="tech-stack">
+                                    <i class="fab fa-html5"></i>
+                                    <i class="fab fa-css3-alt"></i>
+                                    <i class="fab fa-bootstrap"></i>
+                                </div>
+                            </div>
+                            <div class="service-card-back">
+                                <h4 data-i18n="services.features">Características</h4>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i> <span data-i18n="services.card1.f1">Diseño Responsivo</span></li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="services.card1.f2">Optimización SEO</span></li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="services.card1.f3">Rendimiento Optimizado</span></li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="services.card1.f4">Diseño UX/UI</span></li>
+                                </ul>
+                                <div class="service-cta">
+                                    <a href="#contact" class="btn btn-outline-primary" data-i18n="services.cta">Solicitar Información</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aplicaciones Web -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-card-inner">
+                            <div class="service-card-front">
+                                <div class="service-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h3 data-i18n="services.card2.title">Aplicaciones Web</h3>
+                                <div class="tech-stack">
+                                    <i class="fab fa-react"></i>
+                                    <i class="fab fa-node-js"></i>
+                                    <i class="fab fa-js"></i>
+                                </div>
+                            </div>
+                            <div class="service-card-back">
+                                <h4 data-i18n="services.features">Características</h4>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i> <span data-i18n="services.card2.f1">Single Page Applications</span></li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="services.card2.f2">APIs RESTful</span></li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="services.card2.f3">Base de Datos</span></li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="services.card2.f4">Autenticación Segura</span></li>
+                                </ul>
+                                <div class="service-cta">
+                                    <a href="#contact" class="btn btn-outline-primary" data-i18n="services.cta">Solicitar Información</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E-commerce -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-card-inner">
+                            <div class="service-card-front">
+                                <div class="service-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <h3 data-i18n="services.card3.title">E-commerce</h3>
+                                <div class="tech-stack">
+                                    <i class="fab fa-wordpress"></i>
+                                    <i class="fab fa-shopify"></i>
+                                    <i class="fab fa-woocommerce"></i>
+                                </div>
+                            </div>
+                            <div class="service-card-back">
+                                <h4 data-i18n="services.features">Características</h4>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i> <span data-i18n="services.card3.f1">Carrito de Compras</span></li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="services.card3.f2">Pasarelas de Pago</span></li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="services.card3.f3">Gestión de Inventario</span></li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="services.card3.f4">Panel Administrativo</span></li>
+                                </ul>
+                                <div class="service-cta">
+                                    <a href="#contact" class="btn btn-outline-primary" data-i18n="services.cta">Solicitar Información</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Showcase Section -->
+    <section id="trusted" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="badge rounded-pill text-bg-primary mb-3" data-i18n="portfolio.badge">Portfolio</span>
+                <h2 class="display-4 fw-bold mb-3" data-i18n="portfolio.title">Nuestro Trabajo</h2>
+                <div class="title-underline"></div>
+                <p class="lead text-secondary mt-4" data-i18n="portfolio.subtitle">Transformamos ideas en soluciones digitales innovadoras</p>
+            </div>
+            <div class="row justify-content-center">
+                <!-- Proyecto LogMe -->
+                <div class="col-lg-6 col-md-8 mb-4">
+                    <div class="portfolio-showcase">
+                        <div class="portfolio-image">
+                            <img src="img/logme-preview.jpg" alt="LogMe Platform" class="img-fluid rounded shadow">
+                            <div class="portfolio-overlay">
+                                <a href="https://logme.com.co/login.html" target="_blank" class="btn btn-light">
+                                    <i class="fas fa-external-link-alt me-2"></i><span data-i18n="portfolio.visit">Visitar Sitio</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="project-header">
+                                <h3 class="project-title">LogMe</h3>
+                                <span class="project-badge" data-i18n="portfolio.featured">Proyecto Destacado</span>
+                            </div>
+                            <p class="project-description" data-i18n="portfolio.p1_desc">Sistema de reconocimiento facial para control de acceso y asistencia. Interfaz intuitiva con autenticación biométrica en tiempo real.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Proyecto Diálogo -->
+                <div class="col-lg-6 col-md-8 mb-4">
+                    <div class="portfolio-showcase">
+                        <div class="portfolio-image">
+                            <img src="img/dialogo-preview.jpg" alt="Diálogo - Lugar de Encuentro" class="img-fluid rounded shadow">
+                            <div class="portfolio-overlay">
+                                <a href="http://18.191.236.172:3000/index" target="_blank" class="btn btn-light">
+                                    <i class="fas fa-external-link-alt me-2"></i><span data-i18n="portfolio.visit">Visitar Sitio</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Diálogo</h3>
+                                <span class="project-badge" data-i18n="portfolio.featured">Proyecto Destacado</span>
+                            </div>
+                            <p class="project-description" data-i18n="portfolio.p2_desc">Plataforma de reserva de espacios con sistema de gestión completo. Incluye reservas online, planes personalizados y panel administrativo.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Bootstrap</span>
+                                <span class="tech-tag">HTML/CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="tech" class="py-5 bg-light section-bg">
+        <div class="container">
+            <h2 class="text-center mb-5" data-i18n="tech.title">Nuestro Stack Tecnológico</h2>
+            <p class="text-center mb-5 lead" data-i18n="tech.subtitle">Utilizamos las tecnologías web más modernas y robustas para crear soluciones digitales de alta calidad.</p>
+            <div class="tech-carousel-viewport">
+                <div class="tech-carousel-track">
+                    <!-- Carrusel: tarjetas duplicadas para bucle infinito -->
+                    <div class="tech-card">
+                        <i class="fas fa-code fa-3x"></i>
+                        <h3 data-i18n="tech.frontbase">Frontend Base</h3>
+                        <p>HTML5 / CSS3 / JavaScript</p>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fab fa-react fa-3x"></i>
+                        <h3 data-i18n="tech.frontfw">Frontend Frameworks</h3>
+                        <p>React / Vue.js / Angular</p>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fas fa-palette fa-3x"></i>
+                        <h3 data-i18n="tech.ui">UI Frameworks</h3>
+                        <p>Bootstrap / Vuetify</p>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fas fa-server fa-3x"></i>
+                        <h3 data-i18n="tech.backend">Backend</h3>
+                        <p>Node.js / Express.js / Laravel</p>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fas fa-database fa-3x"></i>
+                        <h3 data-i18n="tech.db">Bases de Datos</h3>
+                        <p>MySQL / MongoDB</p>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fas fa-shopping-cart fa-3x"></i>
+                        <h3 data-i18n="tech.cms">CMS y E-commerce</h3>
+                        <p>WordPress / Shopify</p>
+                    </div>
+                    <!-- Duplicado para efecto infinito -->
+                    <div class="tech-card">
+                        <i class="fas fa-code fa-3x"></i>
+                        <h3>Frontend Base</h3>
+                        <p>HTML5 / CSS3 / JavaScript</p>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fab fa-react fa-3x"></i>
+                        <h3>Frontend Frameworks</h3>
+                        <p>React / Vue.js / Angular</p>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fas fa-palette fa-3x"></i>
+                        <h3>UI Frameworks</h3>
+                        <p>Bootstrap / Vuetify</p>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fas fa-server fa-3x"></i>
+                        <h3>Backend</h3>
+                        <p>Node.js / Express.js / Laravel</p>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fas fa-database fa-3x"></i>
+                        <h3>Bases de Datos</h3>
+                        <p>MySQL / MongoDB</p>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fas fa-shopping-cart fa-3x"></i>
+                        <h3>CMS y E-commerce</h3>
+                        <p>WordPress / Shopify</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube Channel Section -->
+    <section class="py-5 section-bg">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="youtube-content pe-lg-4">
+                        <span class="badge rounded-pill youtube-badge mb-3" data-i18n="yt.badge">
+                            <i class="fab fa-youtube me-2"></i>Canal de YouTube
+                        </span>
+                        <h2 class="display-4 mb-4" data-i18n="yt.title_html" data-i18n-html="true">
+                            <span class="highlight-text">¡Aprende a Programar</span> 
+                            <span class="gradient-text">GRATIS!</span>
+                        </h2>
+                        <p class="lead mb-4" data-i18n="yt.desc">
+                            <span class="text-emphasis">¿Quieres convertirte en desarrollador web?</span><br>
+                            Descubre una colección completa de tutoriales, proyectos paso a paso y recursos gratuitos para dominar el desarrollo web. 
+                            <span class="text-highlight">¡Código fuente incluido en cada proyecto!</span>
+                        </p>
+                        <div class="youtube-stats mb-4">
+                            <div class="row g-3">
+                                <div class="col-auto">
+                                    <div class="stat-item">
+                                        <i class="fas fa-video"></i>
+                                        <span data-i18n="yt.s1">Tutoriales Completos</span>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="stat-item">
+                                        <i class="fas fa-code"></i>
+                                        <span data-i18n="yt.s2">Código Fuente</span>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="stat-item">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        <span data-i18n="yt.s3">Proyectos Prácticos</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://www.youtube.com/@Ciscodedev" target="_blank" class="btn btn-youtube btn-lg">
+                            <i class="fab fa-youtube me-2"></i><span data-i18n="yt.cta">¡Comienza Ahora!</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="youtube-video-wrapper">
+                        <div class="ratio ratio-16x9 rounded shadow-lg overflow-hidden">
+                            <iframe 
+                                src="https://www.youtube.com/embed/jJjCBrrLXZQ" 
+                                title="Tutorial Desarrollo Web" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-5 section-bg">
+        <div class="container">
+            <h2 class="text-center display-4 fw-bold mb-4" data-i18n="why.title">¿Por qué elegir Ciscode?</h2>
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-8 text-center">
+                    <p class="lead mb-0" data-i18n="why.subtitle">Beneficios claros, resultados reales. Descubre por qué somos tu mejor opción tecnológica.</p>
+                </div>
+            </div>
+            <div class="why-grid row g-3 justify-content-center mb-4">
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="why-bubble">
+                        <div class="why-bubble-icon"><i class="fas fa-rocket"></i></div>
+                        <h3 data-i18n="why.agile">Ágil</h3>
+                        <p data-i18n="why.agile_d">Entregas rápidas y eficientes</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="why-bubble">
+                        <div class="why-bubble-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3 data-i18n="why.secure">Seguro</h3>
+                        <p data-i18n="why.secure_d">Máxima protección de datos</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="why-bubble">
+                        <div class="why-bubble-icon"><i class="fas fa-users"></i></div>
+                        <h3 data-i18n="why.experts">Expertos</h3>
+                        <p data-i18n="why.experts_d">Equipo certificado y profesional</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="why-bubble">
+                        <div class="why-bubble-icon"><i class="fas fa-handshake"></i></div>
+                        <h3 data-i18n="why.support">Soporte</h3>
+                        <p data-i18n="why.support_d">Acompañamiento permanente</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="why-bubble">
+                        <div class="why-bubble-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3 data-i18n="why.results">Resultados</h3>
+                        <p data-i18n="why.results_d">Enfoque en métricas y objetivos</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="why-bubble">
+                        <div class="why-bubble-icon"><i class="fas fa-cogs"></i></div>
+                        <h3 data-i18n="why.tech">Tecnología</h3>
+                        <p data-i18n="why.tech_d">Stack moderno y actualizado</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <a href="https://wa.me/573006957308" target="_blank" class="btn btn-primary btn-lg" data-i18n="why.cta">Contáctanos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 section-bg">
+        <div class="container">
+            <h2 class="text-center display-4 fw-bold mb-4" data-i18n="contact.title">Contacto</h2>
+            <div class="row justify-content-center g-4">
+                <!-- WhatsApp -->
+                <div class="col-md-6">
+                    <div class="contact-bubble whatsapp">
+                        <div class="contact-bubble-icon"><i class="fab fa-whatsapp"></i></div>
+                        <h3 data-i18n="contact.whatsapp">WhatsApp</h3>
+                        <p data-i18n="contact.whatsapp_d">¿Tienes dudas? ¡Escríbenos!</p>
+                        <a href="https://wa.me/573006957308" target="_blank" class="btn btn-success w-100 mt-2"><i class="fab fa-whatsapp me-2"></i><span data-i18n="contact.chat">Chatear</span></a>
+                    </div>
+                </div>
+                <!-- Redes Sociales -->
+                <div class="col-md-6">
+                    <div class="contact-bubble social">
+                        <div class="contact-bubble-icon"><i class="fas fa-share-alt"></i></div>
+                        <h3 data-i18n="contact.socials">Redes Sociales</h3>
+                        <p data-i18n="contact.socials_d">Síguenos y mantente actualizado</p>
+                        <div class="contact-social-icons mt-2">
+                            <a href="https://www.instagram.com/cristiancano1236" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@ciscodedev" target="_blank" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.youtube.com/@Ciscodedev" target="_blank" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+                             <a href="https://github.com/Cristiancano1236" target="_blank" class="social-icon github"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/573006957308" class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <div id="wpp-float-msg" class="wpp-float-msg" style="display:none;">
+        <span class="wpp-float-msg-text">¿Tienes dudas? ¡Escríbenos por WhatsApp!</span>
+        <button class="wpp-float-msg-close" aria-label="Cerrar">&times;</button>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <style>
+    /* Portfolio Section Styles */
+    #trusted {
+        background-color: var(--light-bg);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .text-secondary {
+        color: var(--secondary-color) !important;
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+
+    .title-underline {
+        width: 80px;
+        height: 4px;
+        background-color: var(--primary-color);
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .title-underline::after {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 4px;
+        background-color: var(--secondary-color);
+        right: -50px;
+        top: 0;
+    }
+
+    .portfolio-showcase {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        transition: all 0.4s ease;
+        height: 100%;
+        border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .portfolio-showcase:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        border-color: var(--primary-color);
+    }
+
+    .portfolio-image {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .portfolio-image img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+    }
+
+    .portfolio-showcase:hover .portfolio-image img {
+        transform: scale(1.05);
+    }
+
+    .portfolio-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(65, 71, 74, 0.9);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+
+    .portfolio-showcase:hover .portfolio-overlay {
+        opacity: 1;
+    }
+
+    .portfolio-content {
+        padding: 2rem;
+    }
+
+    .project-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+
+    .project-title {
+        color: var(--text-color);
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .project-badge {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        font-size: 0.85rem;
+        font-weight: 500;
+    }
+
+    .project-description {
+        color: var(--text-color);
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
+    .tech-tags {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+
+    .tech-tag {
+        background-color: var(--light-bg);
+        color: var(--text-color);
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        border: 1px solid var(--primary-color);
+        transition: all 0.3s ease;
+    }
+
+    .tech-tag:hover {
+        background-color: var(--primary-color);
+        color: white;
+    }
+
+    @media (max-width: 768px) {
+        .portfolio-image img {
+            height: 250px;
+        }
+        
+        .project-title {
+            font-size: 1.5rem;
+        }
+        
+        .project-description {
+            font-size: 1rem;
+        }
+        
+        .tech-tag {
+            font-size: 0.85rem;
+        }
+    }
+
+    /* YouTube Section Styles */
+    .youtube-content {
+        position: relative;
+    }
+
+    .highlight-text {
+        display: block;
+        font-size: 3rem;
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
+        color: var(--text-color);
+    }
+
+    .gradient-text {
+        display: block;
+        font-size: 4rem;
+        font-weight: 900;
+        background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        letter-spacing: 2px;
+    }
+
+    .text-emphasis {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .text-highlight {
+        background: linear-gradient(120deg, rgba(99, 203, 214, 0.2) 0%, rgba(99, 203, 214, 0) 100%);
+        padding: 0.2rem 0.5rem;
+        border-radius: 4px;
+        font-weight: 500;
+        color: var(--text-color);
+    }
+
+    .lead {
+        font-size: 1.2rem;
+        line-height: 1.8;
+    }
+
+    .youtube-stats .stat-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 0.75rem 1.5rem;
+        border-radius: 50px;
+        color: var(--text-color);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(99, 203, 214, 0.1);
+    }
+
+    .youtube-stats .stat-item:hover {
+        transform: translateY(-2px);
+        background: rgba(99, 203, 214, 0.05);
+        border-color: var(--primary-color);
+    }
+
+    .youtube-stats .stat-item i {
+        color: var(--primary-color);
+        font-size: 1.2rem;
+    }
+
+    .youtube-video-wrapper {
+        position: relative;
+        z-index: 1;
+    }
+
+    .youtube-video-wrapper::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: var(--primary-color);
+        border-radius: 15px;
+        transform: rotate(-3deg);
+        z-index: -1;
+        opacity: 0.1;
+    }
+
+    .btn-primary {
+        background: var(--primary-color);
+        border: none;
+        padding: 1rem 2.5rem;
+        font-weight: 600;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(99, 203, 214, 0.2);
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(99, 203, 214, 0.3);
+        background: var(--secondary-color);
+    }
+
+    .badge.text-bg-primary {
+        background: var(--primary-color) !important;
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+        font-weight: 500;
+        box-shadow: 0 2px 10px rgba(99, 203, 214, 0.2);
+    }
+
+    @media (max-width: 991px) {
+        .youtube-content {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .youtube-stats .row {
+            justify-content: center;
+        }
+
+        .highlight-text {
+            font-size: 2.5rem;
+        }
+
+        .gradient-text {
+            font-size: 3rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .youtube-stats .stat-item {
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+        }
+
+        .highlight-text {
+            font-size: 2rem;
+        }
+
+        .gradient-text {
+            font-size: 2.5rem;
+        }
+
+        .text-emphasis {
+            font-size: 1.2rem;
+        }
+    }
+    </style>
+</body>
+</html> 

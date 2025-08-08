@@ -1,0 +1,140 @@
+/* Portfolio Section Styles */
+.portfolio-showcase {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    height: 100%;
+    border: 2px solid var(--header-yellow);
+}
+
+.portfolio-showcase:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.2);
+}
+
+.portfolio-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.portfolio-showcase:hover .portfolio-image img {
+    transform: scale(1.05);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(65, 71, 74, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.portfolio-showcase:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-content {
+    padding: 2rem;
+}
+
+.project-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.project-title {
+    color: var(--text-color);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.project-badge {
+    background-color: var(--header-yellow);
+    color: var(--secondary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.2);
+}
+
+.project-description {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.tech-tags {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.tech-tag {
+    background-color: white;
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 2px solid var(--header-yellow);
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+    background-color: var(--header-yellow);
+    color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.portfolio-overlay .btn-light {
+    background: var(--header-yellow);
+    color: var(--secondary-color);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+.portfolio-overlay .btn-light:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+    .portfolio-image img {
+        height: 250px;
+    }
+    
+    .project-title {
+        font-size: 1.5rem;
+    }
+    
+    .project-description {
+        font-size: 1rem;
+    }
+    
+    .tech-tag {
+        font-size: 0.85rem;
+    }
+}
