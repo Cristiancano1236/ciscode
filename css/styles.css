@@ -18,6 +18,12 @@ body {
     background-color: #F5F5F5;
 }
 
+/* Altura del header fijo estimada para compensar el solapamiento */
+:root { --fixed-header-height: 140px; }
+
+/* Compensación global para el header fijo */
+body { padding-top: var(--fixed-header-height); }
+
 /* Header Styles */
 .navbar {
     box-shadow: 0 2px 15px rgba(0,0,0,0.1);
@@ -109,6 +115,69 @@ body {
     background: linear-gradient(135deg, var(--header-yellow) 0%, #FFF 100%);
     position: relative;
     overflow: hidden;
+}
+
+/* Nuevo Hero Minimalista: Sistema de Parqueadero */
+/*
+    Bloque de estilos dedicado al nuevo hero #hero-parking.
+    Relación: activa para la sección agregada en index.html con id="hero-parking".
+    Mantiene un look minimalista, tipografía clara y buen contraste.
+*/
+#hero-parking.hero-parking {
+    padding-top: 40px; /* ya está luego de about, no necesita tanto */
+    background: #ffffff;
+}
+
+#hero-parking .badge.text-bg-primary {
+    background: var(--secondary-color) !important;
+}
+
+#hero-parking h1 {
+    color: var(--secondary-color);
+}
+
+#hero-parking .lead {
+    color: var(--secondary-color);
+    opacity: 0.9;
+}
+
+#hero-parking .ratio {
+    border: 2px solid var(--primary-color);
+}
+
+/* Título estilo YouTube section (usa clases globales ya definidas en youtube.css) */
+#hero-parking .display-4 .highlight-text { color: var(--text-color); }
+#hero-parking .display-4 .gradient-text {
+    background: linear-gradient(45deg, var(--header-yellow), var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 992px) {
+    #hero-parking.hero-parking {
+        padding-top: 30px;
+        text-align: center;
+    }
+}
+
+/* Evitar que el header tape el inicio de sección al navegar por anclas */
+#about, #hero-parking, #portfolio {
+    scroll-margin-top: var(--fixed-header-height);
+}
+
+/* Mejorar espaciado entre hero-parking y la sección de servicios (Nuestras Soluciones) */
+#hero-parking {
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+#portfolio {
+    padding-top: 3rem;
+}
+
+/* Lista de características compacta para el hero de parqueadero */
+.hero-parking-features li {
+    color: var(--secondary-color);
 }
 
 /* Promotional Styles */
@@ -2955,6 +3024,17 @@ footer {
     background: var(--light-bg);
 }
 
+/* Aumenta separación superior para que no lo tape el header fijo */
+.about-section {
+    padding-top: clamp(100px, calc(var(--fixed-header-height) + 40px), 200px);
+}
+
+@media (max-width: 992px) {
+    .about-section {
+        padding-top: clamp(80px, calc(var(--fixed-header-height) + 20px), 160px);
+    }
+}
+
 .about-photo-wrapper {
     position: relative;
     max-width: 300px;
@@ -2976,6 +3056,41 @@ footer {
     background: linear-gradient(45deg, var(--primary-color), var(--primary-color));
     z-index: -1;
     opacity: 0.25;
+}
+
+/* Efecto colorido adicional detrás de la foto (no modifica el existente) */
+.about-photo-wrapper::after {
+    content: '';
+    position: absolute;
+    inset: -20px;
+    border-radius: 36px;
+    /* Degradado cónico multicolor que rota suavemente */
+    background: conic-gradient(from 180deg at 50% 50%,
+        #63CBD6 0%,
+        #7bdcb5 12%,
+        #ffd700 25%,
+        #ff9a9e 37%,
+        #8a2be2 50%,
+        #00d4ff 62%,
+        #63CBD6 100%);
+    filter: blur(24px);
+    opacity: 0.55;
+    z-index: -2;
+    animation: about-ring-spin 16s linear infinite;
+}
+
+@keyframes about-ring-spin {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.02); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+/* Suavizar en pantallas pequeñas para no saturar */
+@media (max-width: 576px) {
+    .about-photo-wrapper::after {
+        filter: blur(18px);
+        opacity: 0.45;
+    }
 }
 
 .about-photo-glow {

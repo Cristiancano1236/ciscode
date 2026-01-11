@@ -67,13 +67,19 @@
 }
 
 .project-badge {
-    background-color: var(--header-yellow);
-    color: var(--secondary-color);
+    /* Unificar con estilo general definido en index.css/styles.css */
+    background-color: var(--primary-color);
+    color: #fff;
     padding: 0.5rem 1rem;
     border-radius: 50px;
     font-size: 0.85rem;
-    font-weight: 600;
-    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.2);
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(99, 203, 214, 0.25);
+    display: inline-flex;           /* asegura ancho al contenido */
+    align-items: center;
+    gap: 0.4rem;
+    white-space: nowrap;            /* evita saltos de línea que alteren ancho */
+    flex: 0 0 auto;                 /* no crecer dentro de flex container */
 }
 
 .project-description {

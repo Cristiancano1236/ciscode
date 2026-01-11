@@ -71,6 +71,11 @@ document.addEventListener('DOMContentLoaded', function() {
             'portfolio.featured': 'Proyecto Destacado',
             'portfolio.p1_desc': 'Sistema de reconocimiento facial para control de acceso y asistencia. Interfaz intuitiva con autenticación biométrica en tiempo real.',
             'portfolio.p2_desc': 'Plataforma de reserva de espacios con sistema de gestión completo. Incluye reservas online, planes personalizados y panel administrativo.',
+            // Descripción del nuevo proyecto MathSnap
+            // Usado en index.html dentro de la sección #trusted en la tarjeta MathSnap
+            'portfolio.p3_desc': 'Resuelve problemas matemáticos desde imágenes o texto, con pasos detallados y LaTeX. Construido con Bootstrap, HTML, CSS y JavaScript.',
+            // Etiqueta para botón cuando la demo es privada o sin URL pública
+            'portfolio.private': 'Demo privada',
             'brand.tagline': 'Desarrollo Web Profesional',
             'nav.about': 'Sobre mí',
             'nav.services': 'Servicios',
@@ -86,10 +91,10 @@ document.addEventListener('DOMContentLoaded', function() {
             'services.subtitle': 'Transformamos ideas en experiencias digitales excepcionales',
             'about.badge': 'Sobre mí',
             'about.title': 'Hola, soy Cristian Cano',
-            'about.desc': 'Desarrollador de software colombiano con más de 5 años de experiencia creando productos digitales a medida. Comparto contenido en YouTube para ayudar a otros a convertirse en desarrolladores web y construyo proyectos con un enfoque en rendimiento, accesibilidad y una excelente experiencia de usuario.',
+            'about.desc': 'Desarrollador de software colombiano con más de 6 años de experiencia creando productos digitales a medida. Comparto contenido en YouTube para ayudar a otros a convertirse en desarrolladores web y construyo proyectos con un enfoque en rendimiento, accesibilidad y una excelente experiencia de usuario.',
             'about.nationality': 'Colombiano 🇨🇴',
             'about.location': 'Medellín, Colombia',
-            'about.experience': '+5 años de experiencia',
+            'about.experience': '+6 años de experiencia',
             'about.channel': 'Canal: @Ciscodedev',
             'about.github': 'GitHub',
             'about.youtube': 'YouTube',
@@ -165,6 +170,11 @@ document.addEventListener('DOMContentLoaded', function() {
             'portfolio.featured': 'Featured Project',
             'portfolio.p1_desc': 'Facial recognition system for access control and attendance. Intuitive interface with real-time biometric authentication.',
             'portfolio.p2_desc': 'Space booking platform with a full management system. Includes online reservations, custom plans, and admin panel.',
+            // MathSnap description in English
+            // Used in index.html inside #trusted section for MathSnap card
+            'portfolio.p3_desc': 'Solve math problems from images or text with step-by-step solutions and LaTeX support. Built with Bootstrap, HTML, CSS and JavaScript.',
+            // Label when demo is private/unavailable
+            'portfolio.private': 'Private demo',
             'brand.tagline': 'Professional Web Development',
             'nav.about': 'About',
             'nav.services': 'Services',
@@ -183,13 +193,48 @@ document.addEventListener('DOMContentLoaded', function() {
             'about.desc': 'Colombian software developer with 5+ years of experience building custom digital products. I share content on YouTube to help others become web developers and I build projects focused on performance, accessibility, and great UX.',
             'about.nationality': 'Colombian 🇨🇴',
             'about.location': 'Medellín, Colombia',
-            'about.experience': '5+ years of experience',
+            'about.experience': '6+ years of experience',
             'about.channel': 'Channel: @Ciscodedev',
             'about.github': 'GitHub',
             'about.youtube': 'YouTube',
             'about.projects': 'View projects'
         }
     };
+
+    // Textos de i18n para la sección de hero-parking
+    translations.es['parking.badge'] = 'Sistema de Parqueadero';
+    translations.es['parking.free'] = 'Gratis';
+    translations.es['parking.opensource'] = 'Código abierto';
+    translations.es['parking.title_html'] = '<span class="highlight-text">Sistema de Parqueadero</span> <span class="gradient-text">TOTALMENTE GRATIS</span>';
+    translations.es['parking.desc'] = 'Sistema sencillo y completamente funcional desarrollado con <strong>Node.js</strong>, <strong>Express</strong> y <strong>MariaDB</strong>. Ideal para comenzar rápido, multi‑empresa y con roles.';
+    translations.es['parking.f1'] = 'Ingreso/salida con <strong>cálculo automático</strong>';
+    translations.es['parking.f2'] = 'Tarifas por <strong>minuto, hora, día o mixto</strong>';
+    translations.es['parking.f3'] = '<strong>Multi‑empresa</strong> y <strong>roles</strong> (admin/operador)';
+    translations.es['parking.f4'] = '<strong>Dashboard</strong> y KPIs del día';
+    translations.es['parking.f5'] = 'Reportes con filtros y <strong>exportación a Excel</strong>';
+    translations.es['parking.f6'] = 'Historial por placa y <strong>reimpresión de factura</strong>';
+    translations.es['parking.f7'] = '<strong>Turnos de caja</strong> (apertura/cierre y diferencias)';
+    translations.es['parking.cta_video'] = 'Ver video';
+    translations.es['parking.cta_download'] = 'Descargar código';
+    translations.es['parking.cta_install'] = 'Tutorial de instalación';
+    translations.es['parking.cta_repo'] = 'Ver repo';
+
+    translations.en['parking.badge'] = 'Parking System';
+    translations.en['parking.free'] = 'Free';
+    translations.en['parking.opensource'] = 'Open source';
+    translations.en['parking.title_html'] = '<span class="highlight-text">Parking System</span> <span class="gradient-text">COMPLETELY FREE</span>';
+    translations.en['parking.desc'] = 'Simple and fully functional system built with <strong>Node.js</strong>, <strong>Express</strong> and <strong>MariaDB</strong>. Start fast, multi‑company and role based.';
+    translations.en['parking.f1'] = 'Vehicle in/out with <strong>automatic calculation</strong>';
+    translations.en['parking.f2'] = 'Rates per <strong>minute, hour, day or mixed</strong>';
+    translations.en['parking.f3'] = '<strong>Multi‑company</strong> and <strong>roles</strong> (admin/operator)';
+    translations.en['parking.f4'] = '<strong>Dashboard</strong> and daily KPIs';
+    translations.en['parking.f5'] = 'Reports with filters and <strong>Excel export</strong>';
+    translations.en['parking.f6'] = 'History by plate and <strong>invoice reprint</strong>';
+    translations.en['parking.f7'] = '<strong>Cash shifts</strong> (opening/closing and differences)';
+    translations.en['parking.cta_video'] = 'Watch video';
+    translations.en['parking.cta_download'] = 'Download code';
+    translations.en['parking.cta_install'] = 'Install tutorial';
+    translations.en['parking.cta_repo'] = 'View repo';
 
     function setLanguage(lang) {
         const dict = translations[lang] || translations.es;
@@ -262,6 +307,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add scroll-based header transparency
     const header = document.querySelector('header');
+
+    // Ajuste dinámico: altura real del header fijo → variable CSS
+    // Relación: css/styles.css usa --fixed-header-height para padding del body y scroll-margin
+    function updateFixedHeaderHeightVar() {
+        if (!header) return;
+        const height = header.offsetHeight;
+        document.documentElement.style.setProperty('--fixed-header-height', height + 'px');
+    }
+    updateFixedHeaderHeightVar();
+    window.addEventListener('resize', updateFixedHeaderHeightVar);
+    window.addEventListener('load', updateFixedHeaderHeightVar);
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             header.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
