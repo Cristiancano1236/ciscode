@@ -2767,6 +2767,11 @@ footer {
     padding: 2rem;
     position: relative;
     overflow: hidden;
+    /* Alineación consistente de icono/título/descripcion en todas las tarjetas */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .tech-carousel-track .tech-card::before {
@@ -2819,7 +2824,8 @@ footer {
 
 @keyframes tech-carousel-move {
     0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-6 * 270px - 5 * 2rem)); }
+    /* 8 tarjetas por bloque (duplicadas en HTML para loop infinito) */
+    100% { transform: translateX(calc(-8 * 300px - 7 * 2rem)); }
 }
 
 @media (max-width: 992px) {
@@ -2833,7 +2839,7 @@ footer {
     }
     @keyframes tech-carousel-move {
         0% { transform: translateX(0); }
-        100% { transform: translateX(calc(-6 * 220px - 5 * 1.2rem)); }
+        100% { transform: translateX(calc(-8 * 220px - 7 * 1.2rem)); }
     }
 }
 
@@ -2855,7 +2861,7 @@ footer {
     }
     @keyframes tech-carousel-move {
         0% { transform: translateX(0); }
-        100% { transform: translateX(calc(-6 * 160px - 5 * 0.7rem)); }
+        100% { transform: translateX(calc(-8 * 160px - 7 * 0.7rem)); }
     }
 }
 

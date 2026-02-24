@@ -64,6 +64,10 @@ document.addEventListener('DOMContentLoaded', function() {
             'tech.backend': 'Backend',
             'tech.db': 'Bases de Datos',
             'tech.cms': 'CMS y E-commerce',
+            // Nuevos títulos para tarjetas agregadas en index.html sección #tech
+            // Se relaciona con data-i18n en index.html para mantener ES/EN sincronizado
+            'tech.tooling': 'Tooling y Colaboración',
+            'tech.cloud': 'Cloud y Web Apps',
             'portfolio.badge': 'Portfolio',
             'portfolio.title': 'Nuestro Trabajo',
             'portfolio.subtitle': 'Transformamos ideas en soluciones digitales innovadoras',
@@ -163,6 +167,10 @@ document.addEventListener('DOMContentLoaded', function() {
             'tech.backend': 'Backend',
             'tech.db': 'Databases',
             'tech.cms': 'CMS & E‑commerce',
+            // New card titles added in index.html section #tech
+            // Linked through data-i18n keys to preserve bilingual behavior
+            'tech.tooling': 'Tooling & Collaboration',
+            'tech.cloud': 'Cloud & Web Apps',
             'portfolio.badge': 'Portfolio',
             'portfolio.title': 'Our Work',
             'portfolio.subtitle': 'We turn ideas into innovative digital solutions',
