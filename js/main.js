@@ -73,11 +73,11 @@ document.addEventListener('DOMContentLoaded', function() {
             'portfolio.subtitle': 'Transformamos ideas en soluciones digitales innovadoras',
             'portfolio.visit': 'Visitar Sitio',
             'portfolio.featured': 'Proyecto Destacado',
-            'portfolio.p1_desc': 'Sistema de reconocimiento facial para control de acceso y asistencia. Interfaz intuitiva con autenticación biométrica en tiempo real.',
-            'portfolio.p2_desc': 'Plataforma de reserva de espacios con sistema de gestión completo. Incluye reservas online, planes personalizados y panel administrativo.',
-            // Descripción del nuevo proyecto MathSnap
-            // Usado en index.html dentro de la sección #trusted en la tarjeta MathSnap
-            'portfolio.p3_desc': 'Resuelve problemas matemáticos desde imágenes o texto, con pasos detallados y LaTeX. Construido con Bootstrap, HTML, CSS y JavaScript.',
+            'portfolio.p1_desc': 'LogMe es un sistema empresarial de reconocimiento facial para control de asistencia, con registro de usuarios, gestión de departamentos y control de acceso por roles. Incluye reportes de puntualidad, horas trabajadas y asistencia por área, con exportación e impresión para la operación diaria.',
+            'portfolio.p2_desc': 'Diálogo es una plataforma web de reservas para consultorios, espacios grupales y coworking, con calendario, reservas online y gestión de paquetes por horas. Permite a cada profesional administrar su cuenta y sus reservas de forma simple desde cualquier dispositivo.',
+            // Descripción del proyecto Mindagro
+            // Usado en index.html dentro de la sección #trusted en la tarjeta Mindagro
+            'portfolio.p3_desc': 'Mindagro es una plataforma web para gestionar asistencia y productividad en fincas, con fichajes (incluido reconocimiento facial), registro de trabajadores, conteo de cajas y reportes. Su enfoque offline-first permite operar sin internet y sincronizar datos cuando vuelve la conexión, algo clave en zonas rurales.',
             // Etiqueta para botón cuando la demo es privada o sin URL pública
             'portfolio.private': 'Demo privada',
             'brand.tagline': 'Desarrollo Web Profesional',
@@ -176,11 +176,11 @@ document.addEventListener('DOMContentLoaded', function() {
             'portfolio.subtitle': 'We turn ideas into innovative digital solutions',
             'portfolio.visit': 'Visit Site',
             'portfolio.featured': 'Featured Project',
-            'portfolio.p1_desc': 'Facial recognition system for access control and attendance. Intuitive interface with real-time biometric authentication.',
-            'portfolio.p2_desc': 'Space booking platform with a full management system. Includes online reservations, custom plans, and admin panel.',
-            // MathSnap description in English
-            // Used in index.html inside #trusted section for MathSnap card
-            'portfolio.p3_desc': 'Solve math problems from images or text with step-by-step solutions and LaTeX support. Built with Bootstrap, HTML, CSS and JavaScript.',
+            'portfolio.p1_desc': 'LogMe is an enterprise facial-recognition attendance system with user registration, department management, and role-based access control. It includes punctuality, worked-hours, and department attendance reports, with export and print options for daily operations.',
+            'portfolio.p2_desc': 'Diálogo is a web booking platform for consulting rooms, group spaces, and coworking, with calendar-based online reservations and hourly package management. It lets each professional manage account settings and bookings in a simple flow from any device.',
+            // Mindagro description in English
+            // Used in index.html inside #trusted section for the Mindagro card
+            'portfolio.p3_desc': 'Mindagro is a web platform to manage attendance and field productivity for farms, including check-ins (with facial recognition), worker records, box counting, and reporting. Its offline-first approach keeps operations running without internet and syncs data when connectivity returns, which is critical in rural areas.',
             // Label when demo is private/unavailable
             'portfolio.private': 'Private demo',
             'brand.tagline': 'Professional Web Development',

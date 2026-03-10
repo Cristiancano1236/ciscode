@@ -3043,7 +3043,7 @@ footer {
 
 .about-photo-wrapper {
     position: relative;
-    max-width: 300px;
+    max-width: 420px;
     margin: 0 auto;
 }
 
@@ -3159,11 +3159,11 @@ footer {
 }
 
 @media (max-width: 992px) {
-    .about-photo-wrapper { max-width: 260px; }
+    .about-photo-wrapper { max-width: 340px; }
 }
 
 @media (max-width: 576px) {
-    .about-photo-wrapper { max-width: 200px; }
+    .about-photo-wrapper { max-width: 260px; }
 }
 
 /* Centering for About section */
