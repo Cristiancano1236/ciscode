@@ -180,68 +180,6 @@
         </div>
     </section>
 
-    <!-- Nuevo Hero Minimalista: Promoción Sistema de Parqueadero (HTML + Bootstrap) -->
-    <!--
-        Sección nueva para promocionar el sistema de parqueadero totalmente gratis.
-        Relación con otros archivos:
-        - Estilos asociados en css/styles.css (.hero-parking ...)
-        - No requiere JS adicional; se apoya en Bootstrap (CDN ya incluido en <head>)
-    -->
-    <section id="hero-parking" class="hero-parking section-bg">
-        <div class="container">
-            <div class="row min-vh-100 align-items-center g-4">
-                <!-- Columna de texto y CTAs -->
-                <div class="col-lg-6">
-                    <div class="d-flex flex-wrap gap-2 mb-3">
-                       
-
-                    </div>
-                    <h1 class="display-4 mb-3" data-i18n="parking.title_html" data-i18n-html="true">Sistema de Parqueadero <span class="text-decoration-underline">Totalmente Gratis</span></h1>
-                    <p class="lead mb-4" data-i18n="parking.desc" data-i18n-html="true">
-                        Sistema sencillo y completamente funcional desarrollado con <strong>Node.js</strong>, <strong>Express</strong> y <strong>MariaDB</strong>. Ideal para comenzar rápido, multi‑empresa y con roles.
-                    </p>
-                    <!-- Lista resumida de características basada en la descripción del video -->
-                    <ul class="list-unstyled mb-4 hero-parking-features">
-                        <li class="d-flex align-items-start gap-2 mb-2"><i class="fas fa-check text-success mt-1"></i><span data-i18n="parking.f1" data-i18n-html="true">Ingreso/salida con <strong>cálculo automático</strong></span></li>
-                        <li class="d-flex align-items-start gap-2 mb-2"><i class="fas fa-check text-success mt-1"></i><span data-i18n="parking.f2" data-i18n-html="true">Tarifas por <strong>minuto, hora, día o mixto</strong></span></li>
-                        <li class="d-flex align-items-start gap-2 mb-2"><i class="fas fa-check text-success mt-1"></i><span data-i18n="parking.f3" data-i18n-html="true"><strong>Multi‑empresa</strong> y <strong>roles</strong> (admin/operador)</span></li>
-                        <li class="d-flex align-items-start gap-2 mb-2"><i class="fas fa-check text-success mt-1"></i><span data-i18n="parking.f4" data-i18n-html="true"><strong>Dashboard</strong> y KPIs del día</span></li>
-                        <li class="d-flex align-items-start gap-2 mb-2"><i class="fas fa-check text-success mt-1"></i><span data-i18n="parking.f5" data-i18n-html="true">Reportes con filtros y <strong>exportación a Excel</strong></span></li>
-                        <li class="d-flex align-items-start gap-2 mb-2"><i class="fas fa-check text-success mt-1"></i><span data-i18n="parking.f6" data-i18n-html="true">Historial por placa y <strong>reimpresión de factura</strong></span></li>
-                        <li class="d-flex align-items-start gap-2"><i class="fas fa-check text-success mt-1"></i><span data-i18n="parking.f7" data-i18n-html="true"><strong>Turnos de caja</strong> (apertura/cierre y diferencias)</span></li>
-                    </ul>
-                    <div class="d-flex flex-wrap gap-3">
-                        <a href="https://youtu.be/i_TD-JM_vlk?si=xOvbVbK-hptqovKG" target="_blank" class="btn btn-youtube btn-lg">
-                            <i class="fab fa-youtube me-2"></i><span data-i18n="parking.cta_video">Ver video</span>
-                        </a>
-                        <a href="https://drive.google.com/file/d/12xiVQ_MNKn0OU0qk9neehJEBDEqYsaDQ/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-lg">
-                            <i class="fas fa-download me-2"></i><span data-i18n="parking.cta_download">Descargar código</span>
-                        </a>
-                        <a href="https://www.youtube.com/watch?v=Yswch7o_8hw" target="_blank" class="btn btn-outline-secondary btn-lg">
-                            <i class="fas fa-screwdriver-wrench me-2"></i><span data-i18n="parking.cta_install">Tutorial de instalación</span>
-                        </a>
-                        <a href="https://github.com/Cristiancano1236/sistema-parqueadero" target="_blank" class="btn btn-primary btn-lg">
-                            <i class="fab fa-github me-2"></i><span data-i18n="parking.cta_repo">Ver repo</span>
-                        </a>
-                    </div>
-                </div>
-                <!-- Columna de video embebido -->
-                <div class="col-lg-6">
-                    <div class="ratio ratio-16x9 rounded-4 shadow-lg overflow-hidden">
-                        <!-- Iframe del video: fuente oficial de YouTube -->
-                        <iframe 
-                            src="https://www.youtube.com/embed/i_TD-JM_vlk" 
-                            title="Sistema de Parqueadero Gratis" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Services Section -->
     <section id="portfolio" class="py-5 section-bg">
         <div class="container">
@@ -357,33 +295,75 @@
                 <p class="lead text-secondary mt-4" data-i18n="portfolio.subtitle">Transformamos ideas en soluciones digitales innovadoras</p>
             </div>
             <div class="row g-4 align-items-stretch portfolio-row d-none d-md-flex">
-                <!-- Proyecto LogMe -->
+                <!-- Proyecto ECL Fruver (orden 1; sitio https://eclfruver.com/ ; i18n: portfolio.p1_desc en js/main.js) -->
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="portfolio-showcase">
                         <div class="portfolio-image">
-                            <img src="img/logme-preview.jpg" alt="LogMe Platform" class="img-fluid rounded shadow">
+                            <img src="img/ECLfruver.png" alt="ECL Fruver - E-commerce frutas y verduras Medellín" class="img-fluid rounded shadow">
                             <div class="portfolio-overlay">
-                                <a href="https://logme.com.co/login.html" target="_blank" class="btn btn-light">
+                                <a href="https://eclfruver.com/" target="_blank" rel="noopener noreferrer" class="btn btn-light">
                                     <i class="fas fa-external-link-alt me-2"></i><span data-i18n="portfolio.visit">Visitar Sitio</span>
                                 </a>
                             </div>
                         </div>
                         <div class="portfolio-content">
                             <div class="project-header">
-                                <h3 class="project-title">LogMe</h3>
+                                <h3 class="project-title">ECL Fruver</h3>
                                 <span class="project-badge" data-i18n="portfolio.featured">Proyecto Destacado</span>
                             </div>
-                            <p class="project-description" data-i18n="portfolio.p1_desc">LogMe es un sistema empresarial de reconocimiento facial para control de asistencia, con registro de usuarios, gestión de departamentos y control de acceso por roles. Incluye reportes de puntualidad, horas trabajadas y asistencia por área, con exportación e impresión para la operación diaria.</p>
+                            <p class="project-description" data-i18n="portfolio.p1_desc">E-commerce B2C para una fruver en Medellín: catálogo, carrito, checkout con domicilios, cuenta de cliente (registro, inicio de sesión con Google, verificación de correo), panel administrativo (productos, pedidos, inventario, reportes) y asistente por chat con IA enlazado al catálogo y al carrito. Incluye protección anti-bots (Cloudflare Turnstile), validación con Zod en API y despliegue sobre Node en servidor con MySQL.</p>
                             <div class="tech-tags">
-                                <span class="tech-tag">HTML5</span>
-                                <span class="tech-tag">CSS3</span>
-                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Vite</span>
+                                <span class="tech-tag">Tailwind CSS</span>
                                 <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Express</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Knex</span>
+                                <span class="tech-tag">Zod</span>
+                                <span class="tech-tag">JWT</span>
+                                <span class="tech-tag">Gemini API</span>
+                                <span class="tech-tag">Cloudflare Turnstile</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Proyecto Diálogo -->
+                <!-- Proyecto Mindagro (orden 2; i18n: portfolio.p3_desc) -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="portfolio-showcase">
+                        <div class="portfolio-image">
+                            <img src="img/mindagro.jpeg" alt="Mindagro - Gestión de asistencia y productividad en el campo" class="img-fluid rounded shadow">
+                            <div class="portfolio-overlay">
+                                <a href="https://mind-agro.com/" target="_blank" class="btn btn-light">
+                                    <i class="fas fa-external-link-alt me-2"></i><span data-i18n="portfolio.visit">Visitar Sitio</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Mindagro</h3>
+                                <span class="project-badge" data-i18n="portfolio.featured">Proyecto Destacado</span>
+                            </div>
+                            <p class="project-description" data-i18n="portfolio.p3_desc">Mindagro es una plataforma web para gestionar asistencia y productividad en fincas, con fichajes (incluido reconocimiento facial), registro de trabajadores, conteo de cajas y reportes. Su enfoque offline-first permite operar sin internet y sincronizar datos cuando vuelve la conexión, algo clave en zonas rurales.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Vite</span>
+                                <span class="tech-tag">Tailwind CSS</span>
+                                <span class="tech-tag">shadcn/ui</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Express</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Supabase</span>
+                                <span class="tech-tag">Workbox (PWA)</span>
+                                <span class="tech-tag">IndexedDB</span>
+                                <span class="tech-tag">face-api.js</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Proyecto Diálogo (orden 3; i18n: portfolio.p2_desc) -->
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="portfolio-showcase">
                         <div class="portfolio-image">
@@ -399,49 +379,21 @@
                                 <h3 class="project-title">Diálogo</h3>
                                 <span class="project-badge" data-i18n="portfolio.featured">Proyecto Destacado</span>
                             </div>
-                            <p class="project-description" data-i18n="portfolio.p2_desc">Diálogo es una plataforma web de reservas para consultorios, espacios grupales y coworking, con calendario, reservas online y gestión de paquetes por horas. Permite a cada profesional administrar su cuenta y sus reservas de forma simple desde cualquier dispositivo.</p>
+                            <p class="project-description" data-i18n="portfolio.p2_desc">Plataforma de reservas para centro de encuentros (consultorios, coworking y salones): disponibilidad, paquetes de horas y límites por usuario. Panel con calendario de ocupación, correo, exportación a Excel, carga de archivos y API endurecida (cabeceras, rate limiting y validación). Uso diario en escritorio y móvil; SEO básico en la web pública.</p>
+                            <!-- Stack resumido (12 etiquetas) para alinear altura con ECL Fruver y Mindagro -->
                             <div class="tech-tags">
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">Bootstrap</span>
-                                <span class="tech-tag">HTML/CSS</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Proyecto Mindagro -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="portfolio-showcase">
-                        <div class="portfolio-image">
-                            <!-- Imagen de portada del proyecto Mindagro (ubicada en img/mindagro.jpeg) -->
-                            <img src="img/mindagro.jpeg" alt="Mindagro - Gestión de asistencia y productividad en el campo" class="img-fluid rounded shadow">
-                            <div class="portfolio-overlay">
-                                <!-- Enlace al sitio público de Mindagro -->
-                                <a href="https://mind-agro.com/" target="_blank" class="btn btn-light">
-                                    <i class="fas fa-external-link-alt me-2"></i><span data-i18n="portfolio.visit">Visitar Sitio</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="portfolio-content">
-                            <div class="project-header">
-                                <h3 class="project-title">Mindagro</h3>
-                                <span class="project-badge" data-i18n="portfolio.featured">Proyecto Destacado</span>
-                            </div>
-                            <!-- Descripción i18n definida en js/main.js (portfolio.p3_desc) -->
-                            <p class="project-description" data-i18n="portfolio.p3_desc">Mindagro es una plataforma web para gestionar asistencia y productividad en fincas, con fichajes (incluido reconocimiento facial), registro de trabajadores, conteo de cajas y reportes. Su enfoque offline-first permite operar sin internet y sincronizar datos cuando vuelve la conexión, algo clave en zonas rurales.</p>
-                            <div class="tech-tags">
-                                <span class="tech-tag">TypeScript</span>
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">Vite</span>
-                                <span class="tech-tag">Tailwind CSS</span>
-                                <span class="tech-tag">shadcn/ui</span>
                                 <span class="tech-tag">Node.js</span>
                                 <span class="tech-tag">Express</span>
+                                <span class="tech-tag">JavaScript</span>
                                 <span class="tech-tag">MySQL</span>
-
-                                <span class="tech-tag">Workbox (PWA)</span>
-                               
-                                
+                                <span class="tech-tag">Bootstrap</span>
+                                <span class="tech-tag">FullCalendar</span>
+                                <span class="tech-tag">Helmet</span>
+                                <span class="tech-tag">express-validator</span>
+                                <span class="tech-tag">express-rate-limit</span>
+                                <span class="tech-tag">Multer</span>
+                                <span class="tech-tag">Nodemailer</span>
+                                <span class="tech-tag">ExcelJS</span>
                             </div>
                         </div>
                     </div>
@@ -456,59 +408,41 @@
                     <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
-                    <!-- Slide LogMe -->
+                    <!-- Slide ECL Fruver (orden 1, activo) -->
                     <div class="carousel-item active">
                         <div class="portfolio-showcase">
                             <div class="portfolio-image">
-                                <img src="img/logme-preview.jpg" alt="LogMe Platform" class="img-fluid rounded shadow">
+                                <img src="img/ECLfruver.png" alt="ECL Fruver - E-commerce frutas y verduras Medellín" class="img-fluid rounded shadow">
                                 <div class="portfolio-overlay">
-                                    <a href="https://logme.com.co/login.html" target="_blank" class="btn btn-light">
+                                    <a href="https://eclfruver.com/" target="_blank" rel="noopener noreferrer" class="btn btn-light">
                                         <i class="fas fa-external-link-alt me-2"></i><span data-i18n="portfolio.visit">Visitar Sitio</span>
                                     </a>
                                 </div>
                             </div>
                             <div class="portfolio-content">
                                 <div class="project-header">
-                                    <h3 class="project-title">LogMe</h3>
+                                    <h3 class="project-title">ECL Fruver</h3>
                                     <span class="project-badge" data-i18n="portfolio.featured">Proyecto Destacado</span>
                                 </div>
-                                <p class="project-description" data-i18n="portfolio.p1_desc">LogMe es un sistema empresarial de reconocimiento facial para control de asistencia, con registro de usuarios, gestión de departamentos y control de acceso por roles. Incluye reportes de puntualidad, horas trabajadas y asistencia por área, con exportación e impresión para la operación diaria.</p>
+                                <p class="project-description" data-i18n="portfolio.p1_desc">E-commerce B2C para una fruver en Medellín: catálogo, carrito, checkout con domicilios, cuenta de cliente (registro, inicio de sesión con Google, verificación de correo), panel administrativo (productos, pedidos, inventario, reportes) y asistente por chat con IA enlazado al catálogo y al carrito. Incluye protección anti-bots (Cloudflare Turnstile), validación con Zod en API y despliegue sobre Node en servidor con MySQL.</p>
                                 <div class="tech-tags">
-                                    <span class="tech-tag">HTML5</span>
-                                    <span class="tech-tag">CSS3</span>
-                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">TypeScript</span>
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Vite</span>
+                                    <span class="tech-tag">Tailwind CSS</span>
                                     <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">Express</span>
+                                    <span class="tech-tag">MySQL</span>
+                                    <span class="tech-tag">Knex</span>
+                                    <span class="tech-tag">Zod</span>
+                                    <span class="tech-tag">JWT</span>
+                                    <span class="tech-tag">Gemini API</span>
+                                    <span class="tech-tag">Cloudflare Turnstile</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Slide Diálogo -->
-                    <div class="carousel-item">
-                        <div class="portfolio-showcase">
-                            <div class="portfolio-image">
-                                <img src="img/dialogo-preview.jpg" alt="Diálogo - Lugar de Encuentro" class="img-fluid rounded shadow">
-                                <div class="portfolio-overlay">
-                                    <a href="https://dialogoencuentro.com/" target="_blank" class="btn btn-light">
-                                        <i class="fas fa-external-link-alt me-2"></i><span data-i18n="portfolio.visit">Visitar Sitio</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="portfolio-content">
-                                <div class="project-header">
-                                    <h3 class="project-title">Diálogo</h3>
-                                    <span class="project-badge" data-i18n="portfolio.featured">Proyecto Destacado</span>
-                                </div>
-                                <p class="project-description" data-i18n="portfolio.p2_desc">Diálogo es una plataforma web de reservas para consultorios, espacios grupales y coworking, con calendario, reservas online y gestión de paquetes por horas. Permite a cada profesional administrar su cuenta y sus reservas de forma simple desde cualquier dispositivo.</p>
-                                <div class="tech-tags">
-                                    <span class="tech-tag">Node.js</span>
-                                    <span class="tech-tag">JavaScript</span>
-                                    <span class="tech-tag">Bootstrap</span>
-                                    <span class="tech-tag">HTML/CSS</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Slide Mindagro -->
+                    <!-- Slide Mindagro (orden 2) -->
                     <div class="carousel-item">
                         <div class="portfolio-showcase">
                             <div class="portfolio-image">
@@ -538,6 +472,40 @@
                                     <span class="tech-tag">Workbox (PWA)</span>
                                     <span class="tech-tag">IndexedDB</span>
                                     <span class="tech-tag">face-api.js</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide Diálogo (orden 3) -->
+                    <div class="carousel-item">
+                        <div class="portfolio-showcase">
+                            <div class="portfolio-image">
+                                <img src="img/dialogo-preview.jpg" alt="Diálogo - Lugar de Encuentro" class="img-fluid rounded shadow">
+                                <div class="portfolio-overlay">
+                                    <a href="https://dialogoencuentro.com/" target="_blank" class="btn btn-light">
+                                        <i class="fas fa-external-link-alt me-2"></i><span data-i18n="portfolio.visit">Visitar Sitio</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <div class="project-header">
+                                    <h3 class="project-title">Diálogo</h3>
+                                    <span class="project-badge" data-i18n="portfolio.featured">Proyecto Destacado</span>
+                                </div>
+                                <p class="project-description" data-i18n="portfolio.p2_desc">Plataforma de reservas para centro de encuentros (consultorios, coworking y salones): disponibilidad, paquetes de horas y límites por usuario. Panel con calendario de ocupación, correo, exportación a Excel, carga de archivos y API endurecida (cabeceras, rate limiting y validación). Uso diario en escritorio y móvil; SEO básico en la web pública.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">Express</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">MySQL</span>
+                                    <span class="tech-tag">Bootstrap</span>
+                                    <span class="tech-tag">FullCalendar</span>
+                                    <span class="tech-tag">Helmet</span>
+                                    <span class="tech-tag">express-validator</span>
+                                    <span class="tech-tag">express-rate-limit</span>
+                                    <span class="tech-tag">Multer</span>
+                                    <span class="tech-tag">Nodemailer</span>
+                                    <span class="tech-tag">ExcelJS</span>
                                 </div>
                             </div>
                         </div>
@@ -830,9 +798,9 @@
         overflow: hidden;
     }
 
-    /* Fila de portfolio con soporte de carrusel en móviles */
+    /* Fila de portfolio: stretch para igualar altura de columnas (Bootstrap ya añade align-items-stretch en el HTML) */
     .portfolio-row {
-        /* grid normal en desktop ya controlado por bootstrap */
+        align-items: stretch;
     }
 
     /* Carrusel táctil en < md: usa scroll-snap horizontal */
@@ -877,6 +845,7 @@
         top: 0;
     }
 
+    /* Tarjeta en columna flex: misma altura en la fila y stack alineado al pie (index.html #trusted) */
     .portfolio-showcase {
         background: white;
         border-radius: 15px;
@@ -885,6 +854,8 @@
         transition: all 0.4s ease;
         height: 100%;
         border: 1px solid rgba(0,0,0,0.05);
+        display: flex;
+        flex-direction: column;
     }
 
     .portfolio-showcase:hover {
@@ -929,6 +900,10 @@
 
     .portfolio-content {
         padding: 2rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
     }
 
     .project-header {
@@ -958,15 +933,16 @@
         color: var(--text-color);
         font-size: 1.1rem;
         line-height: 1.6;
-        margin-bottom: 1.5rem;
-        /* Altura mínima para uniformar el tamaño visual de las 3 tarjetas en desktop */
-        min-height: 8.5rem;
+        margin-bottom: 1rem;
+        flex: 1;
+        min-height: 0;
     }
 
     .tech-tags {
         display: flex;
         gap: 0.75rem;
         flex-wrap: wrap;
+        margin-top: auto;
     }
 
     .tech-tag {

@@ -73,10 +73,12 @@ document.addEventListener('DOMContentLoaded', function() {
             'portfolio.subtitle': 'Transformamos ideas en soluciones digitales innovadoras',
             'portfolio.visit': 'Visitar Sitio',
             'portfolio.featured': 'Proyecto Destacado',
-            'portfolio.p1_desc': 'LogMe es un sistema empresarial de reconocimiento facial para control de asistencia, con registro de usuarios, gestión de departamentos y control de acceso por roles. Incluye reportes de puntualidad, horas trabajadas y asistencia por área, con exportación e impresión para la operación diaria.',
-            'portfolio.p2_desc': 'Diálogo es una plataforma web de reservas para consultorios, espacios grupales y coworking, con calendario, reservas online y gestión de paquetes por horas. Permite a cada profesional administrar su cuenta y sus reservas de forma simple desde cualquier dispositivo.',
+            // ECL Fruver — tarjeta en index.html sección #trusted (primer proyecto)
+            'portfolio.p1_desc': 'E-commerce B2C para una fruver en Medellín: catálogo, carrito, checkout con domicilios, cuenta de cliente (registro, inicio de sesión con Google, verificación de correo), panel administrativo (productos, pedidos, inventario, reportes) y asistente por chat con IA enlazado al catálogo y al carrito. Incluye protección anti-bots (Cloudflare Turnstile), validación con Zod en API y despliegue sobre Node en servidor con MySQL.',
+            // Diálogo — tarjeta en index.html #trusted (tercer proyecto); texto acortado para alinear altura con las otras tarjetas
+            'portfolio.p2_desc': 'Plataforma de reservas para centro de encuentros (consultorios, coworking y salones): disponibilidad, paquetes de horas y límites por usuario. Panel con calendario de ocupación, correo, exportación a Excel, carga de archivos y API endurecida (cabeceras, rate limiting y validación). Uso diario en escritorio y móvil; SEO básico en la web pública.',
             // Descripción del proyecto Mindagro
-            // Usado en index.html dentro de la sección #trusted en la tarjeta Mindagro
+            // Usado en index.html dentro de la sección #trusted (segundo proyecto)
             'portfolio.p3_desc': 'Mindagro es una plataforma web para gestionar asistencia y productividad en fincas, con fichajes (incluido reconocimiento facial), registro de trabajadores, conteo de cajas y reportes. Su enfoque offline-first permite operar sin internet y sincronizar datos cuando vuelve la conexión, algo clave en zonas rurales.',
             // Etiqueta para botón cuando la demo es privada o sin URL pública
             'portfolio.private': 'Demo privada',
@@ -176,10 +178,12 @@ document.addEventListener('DOMContentLoaded', function() {
             'portfolio.subtitle': 'We turn ideas into innovative digital solutions',
             'portfolio.visit': 'Visit Site',
             'portfolio.featured': 'Featured Project',
-            'portfolio.p1_desc': 'LogMe is an enterprise facial-recognition attendance system with user registration, department management, and role-based access control. It includes punctuality, worked-hours, and department attendance reports, with export and print options for daily operations.',
-            'portfolio.p2_desc': 'Diálogo is a web booking platform for consulting rooms, group spaces, and coworking, with calendar-based online reservations and hourly package management. It lets each professional manage account settings and bookings in a simple flow from any device.',
+            // ECL Fruver — card in index.html #trusted (first project)
+            'portfolio.p1_desc': 'B2C e-commerce for a fruit and vegetable store in Medellín: catalog, cart, checkout with home delivery, customer account (registration, Google sign-in, email verification), admin panel (products, orders, inventory, reports), and an AI chat assistant linked to the catalog and cart. Includes anti-bot protection (Cloudflare Turnstile), Zod validation on the API, and deployment on a Node server with MySQL.',
+            // Diálogo — card in index.html #trusted (third project); shortened copy to match sibling card heights
+            'portfolio.p2_desc': 'Booking platform for a meeting center (consulting rooms, coworking, and group spaces): availability, hour packages, and per-user limits. Admin panel with occupancy calendar, email, Excel export, file uploads, and a hardened API (headers, rate limiting, validation). Daily use on desktop and mobile; basic SEO on the public site.',
             // Mindagro description in English
-            // Used in index.html inside #trusted section for the Mindagro card
+            // Used in index.html #trusted (second project)
             'portfolio.p3_desc': 'Mindagro is a web platform to manage attendance and field productivity for farms, including check-ins (with facial recognition), worker records, box counting, and reporting. Its offline-first approach keeps operations running without internet and syncs data when connectivity returns, which is critical in rural areas.',
             // Label when demo is private/unavailable
             'portfolio.private': 'Private demo',
@@ -208,41 +212,6 @@ document.addEventListener('DOMContentLoaded', function() {
             'about.projects': 'View projects'
         }
     };
-
-    // Textos de i18n para la sección de hero-parking
-    translations.es['parking.badge'] = 'Sistema de Parqueadero';
-    translations.es['parking.free'] = 'Gratis';
-    translations.es['parking.opensource'] = 'Código abierto';
-    translations.es['parking.title_html'] = '<span class="highlight-text">Sistema de Parqueadero</span> <span class="gradient-text">TOTALMENTE GRATIS</span>';
-    translations.es['parking.desc'] = 'Sistema sencillo y completamente funcional desarrollado con <strong>Node.js</strong>, <strong>Express</strong> y <strong>MariaDB</strong>. Ideal para comenzar rápido, multi‑empresa y con roles.';
-    translations.es['parking.f1'] = 'Ingreso/salida con <strong>cálculo automático</strong>';
-    translations.es['parking.f2'] = 'Tarifas por <strong>minuto, hora, día o mixto</strong>';
-    translations.es['parking.f3'] = '<strong>Multi‑empresa</strong> y <strong>roles</strong> (admin/operador)';
-    translations.es['parking.f4'] = '<strong>Dashboard</strong> y KPIs del día';
-    translations.es['parking.f5'] = 'Reportes con filtros y <strong>exportación a Excel</strong>';
-    translations.es['parking.f6'] = 'Historial por placa y <strong>reimpresión de factura</strong>';
-    translations.es['parking.f7'] = '<strong>Turnos de caja</strong> (apertura/cierre y diferencias)';
-    translations.es['parking.cta_video'] = 'Ver video';
-    translations.es['parking.cta_download'] = 'Descargar código';
-    translations.es['parking.cta_install'] = 'Tutorial de instalación';
-    translations.es['parking.cta_repo'] = 'Ver repo';
-
-    translations.en['parking.badge'] = 'Parking System';
-    translations.en['parking.free'] = 'Free';
-    translations.en['parking.opensource'] = 'Open source';
-    translations.en['parking.title_html'] = '<span class="highlight-text">Parking System</span> <span class="gradient-text">COMPLETELY FREE</span>';
-    translations.en['parking.desc'] = 'Simple and fully functional system built with <strong>Node.js</strong>, <strong>Express</strong> and <strong>MariaDB</strong>. Start fast, multi‑company and role based.';
-    translations.en['parking.f1'] = 'Vehicle in/out with <strong>automatic calculation</strong>';
-    translations.en['parking.f2'] = 'Rates per <strong>minute, hour, day or mixed</strong>';
-    translations.en['parking.f3'] = '<strong>Multi‑company</strong> and <strong>roles</strong> (admin/operator)';
-    translations.en['parking.f4'] = '<strong>Dashboard</strong> and daily KPIs';
-    translations.en['parking.f5'] = 'Reports with filters and <strong>Excel export</strong>';
-    translations.en['parking.f6'] = 'History by plate and <strong>invoice reprint</strong>';
-    translations.en['parking.f7'] = '<strong>Cash shifts</strong> (opening/closing and differences)';
-    translations.en['parking.cta_video'] = 'Watch video';
-    translations.en['parking.cta_download'] = 'Download code';
-    translations.en['parking.cta_install'] = 'Install tutorial';
-    translations.en['parking.cta_repo'] = 'View repo';
 
     function setLanguage(lang) {
         const dict = translations[lang] || translations.es;
