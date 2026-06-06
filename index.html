@@ -300,231 +300,172 @@
                 <div class="title-underline"></div>
                 <p class="lead text-secondary mt-4" data-i18n="portfolio.subtitle">Transformamos ideas en soluciones digitales innovadoras</p>
             </div>
-            <div class="row g-4 align-items-stretch portfolio-row d-none d-md-flex">
-                <!-- Proyecto ECL Fruver (orden 1; sitio https://eclfruver.com/ ; i18n: portfolio.p1_desc en js/main.js) -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="portfolio-showcase">
-                        <div class="portfolio-image">
-                            <img src="img/ECLfruver.png" alt="ECL Fruver - E-commerce frutas y verduras Medellín" class="img-fluid rounded shadow">
-                            <div class="portfolio-overlay">
-                                <a href="https://eclfruver.com/" target="_blank" rel="noopener noreferrer" class="btn btn-light">
-                                    <i class="fas fa-external-link-alt me-2"></i><span data-i18n="portfolio.visit">Visitar Sitio</span>
-                                </a>
+            <!-- Slider unificado: escritorio muestra 3 tarjetas, móvil muestra 1 -->
+            <div class="portfolio-slider-wrap" tabindex="0">
+                <div class="portfolio-slider-main">
+                    <button class="ps-arrow ps-prev d-none d-md-flex" id="psPrev" aria-label="Anterior" data-i18n-aria="portfolio.prev"><i class="fas fa-chevron-left"></i></button>
+                    <div class="portfolio-slider-viewport" id="portfolioViewport">
+                    <div class="portfolio-slider-track" id="portfolioTrack">
+                        <!-- ECL Fruver -->
+                        <div class="portfolio-slide">
+                            <div class="portfolio-showcase">
+                                <div class="portfolio-image">
+                                    <img src="img/ECLfruver.png" alt="ECL Fruver - E-commerce frutas y verduras Medellín" class="img-fluid rounded shadow">
+                                    <div class="portfolio-overlay">
+                                        <a href="https://eclfruver.com/" target="_blank" rel="noopener noreferrer" class="btn btn-light">
+                                            <i class="fas fa-external-link-alt me-2"></i><span data-i18n="portfolio.visit">Visitar Sitio</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="portfolio-content">
+                                    <div class="project-header">
+                                        <h3 class="project-title">ECL Fruver</h3>
+                                        <span class="project-badge" data-i18n="portfolio.featured">Proyecto Destacado</span>
+                                    </div>
+                                    <p class="project-description" data-i18n="portfolio.p1_desc">E-commerce B2C para una fruver en Medellín: catálogo, carrito, checkout con domicilios, cuenta de cliente (registro, inicio de sesión con Google, verificación de correo), panel administrativo (productos, pedidos, inventario, reportes) y asistente por chat con IA enlazado al catálogo y al carrito. Incluye protección anti-bots (Cloudflare Turnstile), validación con Zod en API y despliegue sobre Node en servidor con MySQL.</p>
+                                    <div class="tech-tags">
+                                        <span class="tech-tag">TypeScript</span>
+                                        <span class="tech-tag">React</span>
+                                        <span class="tech-tag">Vite</span>
+                                        <span class="tech-tag">Tailwind CSS</span>
+                                        <span class="tech-tag">Node.js</span>
+                                        <span class="tech-tag">Express</span>
+                                        <span class="tech-tag">MySQL</span>
+                                        <span class="tech-tag">Knex</span>
+                                        <span class="tech-tag">Zod</span>
+                                        <span class="tech-tag">JWT</span>
+                                        <span class="tech-tag">Gemini API</span>
+                                        <span class="tech-tag">Cloudflare Turnstile</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="portfolio-content">
-                            <div class="project-header">
-                                <h3 class="project-title">ECL Fruver</h3>
-                                <span class="project-badge" data-i18n="portfolio.featured">Proyecto Destacado</span>
+                        <!-- Mindagro -->
+                        <div class="portfolio-slide">
+                            <div class="portfolio-showcase">
+                                <div class="portfolio-image">
+                                    <img src="img/mindagro.jpeg" alt="Mindagro - Gestión de asistencia y productividad en el campo" class="img-fluid rounded shadow">
+                                    <div class="portfolio-overlay">
+                                        <a href="https://mind-agro.com/" target="_blank" class="btn btn-light">
+                                            <i class="fas fa-external-link-alt me-2"></i><span data-i18n="portfolio.visit">Visitar Sitio</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="portfolio-content">
+                                    <div class="project-header">
+                                        <h3 class="project-title">Mindagro</h3>
+                                        <span class="project-badge" data-i18n="portfolio.featured">Proyecto Destacado</span>
+                                    </div>
+                                    <p class="project-description" data-i18n="portfolio.p3_desc">Mindagro es una plataforma web para control de asistencia y registro de jornada en España, pensada para equipos en campo y múltiples centros: fichaje facial, manual o masivo con trazabilidad, geolocalización opcional y conteo de cajas. Panel con gestión de empleados, reportes por día/semana/mes, exportación a Excel e integración con NOMINASOL (Software DELSOL). PWA offline-first para operar sin internet y sincronizar al volver la conexión; roles y permisos por empresa.</p>
+                                    <div class="tech-tags">
+                                        <span class="tech-tag">TypeScript</span>
+                                        <span class="tech-tag">React</span>
+                                        <span class="tech-tag">Vite</span>
+                                        <span class="tech-tag">Tailwind CSS</span>
+                                        <span class="tech-tag">shadcn/ui</span>
+                                        <span class="tech-tag">Node.js</span>
+                                        <span class="tech-tag">Express</span>
+                                        <span class="tech-tag">MySQL</span>
+                                        <span class="tech-tag">Supabase</span>
+                                        <span class="tech-tag">Workbox (PWA)</span>
+                                        <span class="tech-tag">IndexedDB</span>
+                                        <span class="tech-tag">face-api.js</span>
+                                    </div>
+                                </div>
                             </div>
-                            <p class="project-description" data-i18n="portfolio.p1_desc">E-commerce B2C para una fruver en Medellín: catálogo, carrito, checkout con domicilios, cuenta de cliente (registro, inicio de sesión con Google, verificación de correo), panel administrativo (productos, pedidos, inventario, reportes) y asistente por chat con IA enlazado al catálogo y al carrito. Incluye protección anti-bots (Cloudflare Turnstile), validación con Zod en API y despliegue sobre Node en servidor con MySQL.</p>
-                            <div class="tech-tags">
-                                <span class="tech-tag">TypeScript</span>
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">Vite</span>
-                                <span class="tech-tag">Tailwind CSS</span>
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">Express</span>
-                                <span class="tech-tag">MySQL</span>
-                                <span class="tech-tag">Knex</span>
-                                <span class="tech-tag">Zod</span>
-                                <span class="tech-tag">JWT</span>
-                                <span class="tech-tag">Gemini API</span>
-                                <span class="tech-tag">Cloudflare Turnstile</span>
+                        </div>
+                        <!-- Diálogo -->
+                        <div class="portfolio-slide">
+                            <div class="portfolio-showcase">
+                                <div class="portfolio-image">
+                                    <img src="img/dialogo-preview.jpg" alt="Diálogo - Lugar de Encuentro" class="img-fluid rounded shadow">
+                                    <div class="portfolio-overlay">
+                                        <a href="https://dialogoencuentro.com/" target="_blank" class="btn btn-light">
+                                            <i class="fas fa-external-link-alt me-2"></i><span data-i18n="portfolio.visit">Visitar Sitio</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="portfolio-content">
+                                    <div class="project-header">
+                                        <h3 class="project-title">Diálogo</h3>
+                                        <span class="project-badge" data-i18n="portfolio.featured">Proyecto Destacado</span>
+                                    </div>
+                                    <p class="project-description" data-i18n="portfolio.p2_desc">Plataforma de reservas para centro de encuentros (consultorios, coworking y salones): disponibilidad, paquetes de horas y límites por usuario. Panel con calendario de ocupación, correo, exportación a Excel, carga de archivos y API endurecida (cabeceras, rate limiting y validación). Uso diario en escritorio y móvil; SEO básico en la web pública.</p>
+                                    <div class="tech-tags">
+                                        <span class="tech-tag">Node.js</span>
+                                        <span class="tech-tag">Express</span>
+                                        <span class="tech-tag">JavaScript</span>
+                                        <span class="tech-tag">MySQL</span>
+                                        <span class="tech-tag">Bootstrap</span>
+                                        <span class="tech-tag">FullCalendar</span>
+                                        <span class="tech-tag">Helmet</span>
+                                        <span class="tech-tag">express-validator</span>
+                                        <span class="tech-tag">express-rate-limit</span>
+                                        <span class="tech-tag">Multer</span>
+                                        <span class="tech-tag">Nodemailer</span>
+                                        <span class="tech-tag">ExcelJS</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Casa Blanca Control -->
+                        <div class="portfolio-slide">
+                            <div class="portfolio-showcase">
+                                <div class="portfolio-image">
+                                    <img src="img/casablanca-preview.png" alt="Casa Blanca Control - Administración de parqueaderos" class="img-fluid rounded shadow">
+                                    <div class="portfolio-overlay">
+                                        <a href="https://casablancacontrol.com/" target="_blank" rel="noopener noreferrer" class="btn btn-light">
+                                            <i class="fas fa-external-link-alt me-2"></i><span data-i18n="portfolio.visit">Visitar Sitio</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="portfolio-content">
+                                    <div class="project-header">
+                                        <h3 class="project-title">Casa Blanca Control</h3>
+                                        <span class="project-badge" data-i18n="portfolio.featured">Proyecto Destacado</span>
+                                    </div>
+                                    <p class="project-description" data-i18n="portfolio.p4_desc">Plataforma multi-empresa para parqueaderos: ingreso/salida de vehículos, tarifas por minuto/hora/día, mensualidades y pagos (efectivo, tarjeta y QR). Panel con dashboard, turnos de caja, gestión de usuarios y reportes en Excel. Control de acceso con JWT, anti-bots con Cloudflare Turnstile y despliegue en AWS EC2 con Nginx y MySQL.</p>
+                                    <div class="tech-tags">
+                                        <span class="tech-tag">JavaScript</span>
+                                        <span class="tech-tag">Node.js</span>
+                                        <span class="tech-tag">Express</span>
+                                        <span class="tech-tag">Bootstrap 5</span>
+                                        <span class="tech-tag">MySQL</span>
+                                        <span class="tech-tag">JWT</span>
+                                        <span class="tech-tag">ExcelJS</span>
+                                        <span class="tech-tag">Cloudflare Turnstile</span>
+                                        <span class="tech-tag">Nginx</span>
+                                        <span class="tech-tag">AWS EC2</span>
+                                        <span class="tech-tag">PM2</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    </div>
+                    <button class="ps-arrow ps-next d-none d-md-flex" id="psNext" aria-label="Siguiente" data-i18n-aria="portfolio.next"><i class="fas fa-chevron-right"></i></button>
                 </div>
-                <!-- Proyecto Mindagro (orden 2; i18n: portfolio.p3_desc) -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="portfolio-showcase">
-                        <div class="portfolio-image">
-                            <img src="img/mindagro.jpeg" alt="Mindagro - Gestión de asistencia y productividad en el campo" class="img-fluid rounded shadow">
-                            <div class="portfolio-overlay">
-                                <a href="https://mind-agro.com/" target="_blank" class="btn btn-light">
-                                    <i class="fas fa-external-link-alt me-2"></i><span data-i18n="portfolio.visit">Visitar Sitio</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="portfolio-content">
-                            <div class="project-header">
-                                <h3 class="project-title">Mindagro</h3>
-                                <span class="project-badge" data-i18n="portfolio.featured">Proyecto Destacado</span>
-                            </div>
-                            <p class="project-description" data-i18n="portfolio.p3_desc">Mindagro es una plataforma web para gestionar asistencia y productividad en fincas, con fichajes (incluido reconocimiento facial), registro de trabajadores, conteo de cajas y reportes. Su enfoque offline-first permite operar sin internet y sincronizar datos cuando vuelve la conexión, algo clave en zonas rurales.</p>
-                            <div class="tech-tags">
-                                <span class="tech-tag">TypeScript</span>
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">Vite</span>
-                                <span class="tech-tag">Tailwind CSS</span>
-                                <span class="tech-tag">shadcn/ui</span>
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">Express</span>
-                                <span class="tech-tag">MySQL</span>
-                                <span class="tech-tag">Supabase</span>
-                                <span class="tech-tag">Workbox (PWA)</span>
-                                <span class="tech-tag">IndexedDB</span>
-                                <span class="tech-tag">face-api.js</span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="ps-tabs-desktop d-none d-md-flex" role="tablist" aria-label="Proyectos del portfolio">
+                    <button type="button" class="ps-tab active" role="tab" data-project-idx="0" aria-selected="true">ECL Fruver</button>
+                    <button type="button" class="ps-tab" role="tab" data-project-idx="1" aria-selected="false">Mindagro</button>
+                    <button type="button" class="ps-tab" role="tab" data-project-idx="2" aria-selected="false">Diálogo</button>
+                    <button type="button" class="ps-tab" role="tab" data-project-idx="3" aria-selected="false">Casa Blanca Control</button>
                 </div>
-                <!-- Proyecto Diálogo (orden 3; i18n: portfolio.p2_desc) -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="portfolio-showcase">
-                        <div class="portfolio-image">
-                            <img src="img/dialogo-preview.jpg" alt="Diálogo - Lugar de Encuentro" class="img-fluid rounded shadow">
-                            <div class="portfolio-overlay">
-                                <a href="https://dialogoencuentro.com/" target="_blank" class="btn btn-light">
-                                    <i class="fas fa-external-link-alt me-2"></i><span data-i18n="portfolio.visit">Visitar Sitio</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="portfolio-content">
-                            <div class="project-header">
-                                <h3 class="project-title">Diálogo</h3>
-                                <span class="project-badge" data-i18n="portfolio.featured">Proyecto Destacado</span>
-                            </div>
-                            <p class="project-description" data-i18n="portfolio.p2_desc">Plataforma de reservas para centro de encuentros (consultorios, coworking y salones): disponibilidad, paquetes de horas y límites por usuario. Panel con calendario de ocupación, correo, exportación a Excel, carga de archivos y API endurecida (cabeceras, rate limiting y validación). Uso diario en escritorio y móvil; SEO básico en la web pública.</p>
-                            <!-- Stack resumido (12 etiquetas) para alinear altura con ECL Fruver y Mindagro -->
-                            <div class="tech-tags">
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">Express</span>
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">MySQL</span>
-                                <span class="tech-tag">Bootstrap</span>
-                                <span class="tech-tag">FullCalendar</span>
-                                <span class="tech-tag">Helmet</span>
-                                <span class="tech-tag">express-validator</span>
-                                <span class="tech-tag">express-rate-limit</span>
-                                <span class="tech-tag">Multer</span>
-                                <span class="tech-tag">Nodemailer</span>
-                                <span class="tech-tag">ExcelJS</span>
-                            </div>
-                        </div>
+                <p class="ps-range-desktop d-none d-md-block" id="psRange" aria-live="polite">Mostrando proyectos 1–3 de 4</p>
+                <div class="ps-mobile-nav d-md-none">
+                    <button type="button" class="ps-nav-btn" id="psPrevMobile" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+                    <div class="ps-dots ps-dots-mobile">
+                        <button type="button" class="ps-dot active" data-idx="0" aria-label="Slide 1"></button>
+                        <button type="button" class="ps-dot" data-idx="1" aria-label="Slide 2"></button>
+                        <button type="button" class="ps-dot" data-idx="2" aria-label="Slide 3"></button>
+                        <button type="button" class="ps-dot" data-idx="3" aria-label="Slide 4"></button>
                     </div>
+                    <button type="button" class="ps-nav-btn" id="psNextMobile" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+                    <a class="ps-visit-btn" id="psVisitBtn" href="https://eclfruver.com/" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt"></i>
+                        <span data-i18n="portfolio.visit">Visitar Sitio</span>
+                    </a>
                 </div>
-            </div>
-            
-            <!-- Carrusel móvil (solo XS/SM) con un proyecto por vista -->
-            <div id="portfolioCarousel" class="carousel slide d-md-none" data-bs-touch="true" data-bs-interval="false">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <!-- Slide ECL Fruver (orden 1, activo) -->
-                    <div class="carousel-item active">
-                        <div class="portfolio-showcase">
-                            <div class="portfolio-image">
-                                <img src="img/ECLfruver.png" alt="ECL Fruver - E-commerce frutas y verduras Medellín" class="img-fluid rounded shadow">
-                                <div class="portfolio-overlay">
-                                    <a href="https://eclfruver.com/" target="_blank" rel="noopener noreferrer" class="btn btn-light">
-                                        <i class="fas fa-external-link-alt me-2"></i><span data-i18n="portfolio.visit">Visitar Sitio</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="portfolio-content">
-                                <div class="project-header">
-                                    <h3 class="project-title">ECL Fruver</h3>
-                                    <span class="project-badge" data-i18n="portfolio.featured">Proyecto Destacado</span>
-                                </div>
-                                <p class="project-description" data-i18n="portfolio.p1_desc">E-commerce B2C para una fruver en Medellín: catálogo, carrito, checkout con domicilios, cuenta de cliente (registro, inicio de sesión con Google, verificación de correo), panel administrativo (productos, pedidos, inventario, reportes) y asistente por chat con IA enlazado al catálogo y al carrito. Incluye protección anti-bots (Cloudflare Turnstile), validación con Zod en API y despliegue sobre Node en servidor con MySQL.</p>
-                                <div class="tech-tags">
-                                    <span class="tech-tag">TypeScript</span>
-                                    <span class="tech-tag">React</span>
-                                    <span class="tech-tag">Vite</span>
-                                    <span class="tech-tag">Tailwind CSS</span>
-                                    <span class="tech-tag">Node.js</span>
-                                    <span class="tech-tag">Express</span>
-                                    <span class="tech-tag">MySQL</span>
-                                    <span class="tech-tag">Knex</span>
-                                    <span class="tech-tag">Zod</span>
-                                    <span class="tech-tag">JWT</span>
-                                    <span class="tech-tag">Gemini API</span>
-                                    <span class="tech-tag">Cloudflare Turnstile</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Slide Mindagro (orden 2) -->
-                    <div class="carousel-item">
-                        <div class="portfolio-showcase">
-                            <div class="portfolio-image">
-                                <img src="img/mindagro.jpeg" alt="Mindagro - Gestión de asistencia y productividad en el campo" class="img-fluid rounded shadow">
-                                <div class="portfolio-overlay">
-                                    <a href="https://mind-agro.com/" target="_blank" class="btn btn-light">
-                                        <i class="fas fa-external-link-alt me-2"></i><span data-i18n="portfolio.visit">Visitar Sitio</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="portfolio-content">
-                                <div class="project-header">
-                                    <h3 class="project-title">Mindagro</h3>
-                                    <span class="project-badge" data-i18n="portfolio.featured">Proyecto Destacado</span>
-                                </div>
-                                <p class="project-description" data-i18n="portfolio.p3_desc">Mindagro es una plataforma web para gestionar asistencia y productividad en fincas, con fichajes (incluido reconocimiento facial), registro de trabajadores, conteo de cajas y reportes. Su enfoque offline-first permite operar sin internet y sincronizar datos cuando vuelve la conexión, algo clave en zonas rurales.</p>
-                                <div class="tech-tags">
-                                    <span class="tech-tag">TypeScript</span>
-                                    <span class="tech-tag">React</span>
-                                    <span class="tech-tag">Vite</span>
-                                    <span class="tech-tag">Tailwind CSS</span>
-                                    <span class="tech-tag">shadcn/ui</span>
-                                    <span class="tech-tag">Node.js</span>
-                                    <span class="tech-tag">Express</span>
-                                    <span class="tech-tag">MySQL</span>
-                                    <span class="tech-tag">Supabase</span>
-                                    <span class="tech-tag">Workbox (PWA)</span>
-                                    <span class="tech-tag">IndexedDB</span>
-                                    <span class="tech-tag">face-api.js</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Slide Diálogo (orden 3) -->
-                    <div class="carousel-item">
-                        <div class="portfolio-showcase">
-                            <div class="portfolio-image">
-                                <img src="img/dialogo-preview.jpg" alt="Diálogo - Lugar de Encuentro" class="img-fluid rounded shadow">
-                                <div class="portfolio-overlay">
-                                    <a href="https://dialogoencuentro.com/" target="_blank" class="btn btn-light">
-                                        <i class="fas fa-external-link-alt me-2"></i><span data-i18n="portfolio.visit">Visitar Sitio</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="portfolio-content">
-                                <div class="project-header">
-                                    <h3 class="project-title">Diálogo</h3>
-                                    <span class="project-badge" data-i18n="portfolio.featured">Proyecto Destacado</span>
-                                </div>
-                                <p class="project-description" data-i18n="portfolio.p2_desc">Plataforma de reservas para centro de encuentros (consultorios, coworking y salones): disponibilidad, paquetes de horas y límites por usuario. Panel con calendario de ocupación, correo, exportación a Excel, carga de archivos y API endurecida (cabeceras, rate limiting y validación). Uso diario en escritorio y móvil; SEO básico en la web pública.</p>
-                                <div class="tech-tags">
-                                    <span class="tech-tag">Node.js</span>
-                                    <span class="tech-tag">Express</span>
-                                    <span class="tech-tag">JavaScript</span>
-                                    <span class="tech-tag">MySQL</span>
-                                    <span class="tech-tag">Bootstrap</span>
-                                    <span class="tech-tag">FullCalendar</span>
-                                    <span class="tech-tag">Helmet</span>
-                                    <span class="tech-tag">express-validator</span>
-                                    <span class="tech-tag">express-rate-limit</span>
-                                    <span class="tech-tag">Multer</span>
-                                    <span class="tech-tag">Nodemailer</span>
-                                    <span class="tech-tag">ExcelJS</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
         </div>
     </section>
@@ -802,29 +743,225 @@
     #trusted {
         background-color: var(--light-bg);
         position: relative;
-        overflow: hidden;
     }
 
-    /* Fila de portfolio: stretch para igualar altura de columnas (Bootstrap ya añade align-items-stretch en el HTML) */
-    .portfolio-row {
+    /* ── Portfolio Slider unificado ── */
+    .portfolio-slider-wrap {
+        position: relative;
+        padding: 0 3.2rem;
+    }
+    .portfolio-slider-main {
+        position: relative;
+    }
+    .portfolio-slider-viewport {
+        overflow: hidden;
+        border-radius: 4px;
+    }
+    @media (min-width: 768px) {
+        .portfolio-slider-viewport.has-more::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 2.5rem;
+            height: 100%;
+            pointer-events: none;
+            background: linear-gradient(to right, transparent, rgba(248, 249, 250, 0.95));
+            z-index: 2;
+        }
+        .portfolio-slider-viewport {
+            position: relative;
+        }
+        .project-description {
+            min-height: 6.4em;
+        }
+    }
+    .portfolio-slider-track {
+        display: flex;
+        gap: 1.5rem;
+        transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        will-change: transform;
         align-items: stretch;
     }
-
-    /* Carrusel táctil en < md: usa scroll-snap horizontal */
-    @media (max-width: 767.98px) {
-        .portfolio-row {
-            display: flex;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            gap: 1rem;
-            scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch;
-            padding-bottom: 0.5rem;
+    .portfolio-slide {
+        flex: 0 0 auto;
+        min-width: 0;
+    }
+    /* Flechas de navegación */
+    .ps-arrow {
+        position: absolute;
+        top: 40%;
+        transform: translateY(-50%);
+        background: white;
+        border: 2px solid var(--primary-color);
+        color: var(--primary-color);
+        width: 2.6rem;
+        height: 2.6rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 10;
+        padding: 0;
+        font-size: 1rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+    .ps-arrow:hover:not(:disabled) {
+        background: var(--primary-color);
+        color: white;
+        box-shadow: 0 4px 14px rgba(99,203,214,0.35);
+    }
+    .ps-arrow:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+    }
+    .ps-prev { left: 0; }
+    .ps-next { right: 0; }
+    @media (min-width: 768px) {
+        .ps-arrow {
+            top: 50%;
         }
-        .portfolio-row > [class*="col-"] {
-            flex: 0 0 85%;
-            max-width: 85%;
-            scroll-snap-align: start;
+    }
+    /* Pestañas desktop */
+    .ps-tabs-desktop {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        gap: 0.5rem;
+        margin-top: 1.25rem;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 0.25rem 0;
+        scrollbar-width: none;
+    }
+    .ps-tabs-desktop::-webkit-scrollbar {
+        display: none;
+    }
+    .ps-tab {
+        flex-shrink: 0;
+        padding: 0.5rem 1rem;
+        border: 2px solid rgba(99, 203, 214, 0.35);
+        border-radius: 50px;
+        background: white;
+        color: var(--text-color);
+        font-size: 0.9rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.25s ease;
+    }
+    .ps-tab:hover {
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+    }
+    .ps-tab.active {
+        background: var(--primary-color);
+        border-color: var(--primary-color);
+        color: white;
+        box-shadow: 0 2px 10px rgba(99, 203, 214, 0.35);
+    }
+    .ps-range-desktop {
+        text-align: center;
+        margin: 0.75rem 0 0;
+        font-size: 0.9rem;
+        color: var(--secondary-color);
+        font-weight: 500;
+    }
+    /* Puntos móviles */
+    .ps-dots {
+        display: flex;
+        justify-content: center;
+        gap: 0.55rem;
+        align-items: center;
+    }
+    .ps-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #dee2e6;
+        border: none;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.3s ease;
+        padding: 0;
+        flex-shrink: 0;
+    }
+    .ps-dot.active {
+        background: var(--primary-color);
+        transform: scale(1.35);
+    }
+    /* Barra sticky móvil */
+    .ps-mobile-nav {
+        display: none;
+        position: sticky;
+        bottom: 0.75rem;
+        z-index: 20;
+        margin-top: 1rem;
+        padding: 0.65rem 0.75rem;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .ps-nav-btn {
+        flex-shrink: 0;
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 50%;
+        border: 2px solid var(--primary-color);
+        background: white;
+        color: var(--primary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        padding: 0;
+        font-size: 0.85rem;
+        transition: all 0.2s ease;
+    }
+    .ps-nav-btn:hover:not(:disabled) {
+        background: var(--primary-color);
+        color: white;
+    }
+    .ps-nav-btn:disabled {
+        opacity: 0.35;
+        cursor: not-allowed;
+    }
+    .ps-dots-mobile {
+        flex: 1;
+        min-width: 0;
+        margin: 0;
+    }
+    .ps-visit-btn {
+        flex-shrink: 0;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.45rem 0.75rem;
+        background: var(--primary-color);
+        color: white;
+        border-radius: 50px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: background 0.2s ease;
+    }
+    .ps-visit-btn:hover {
+        background: var(--secondary-color);
+        color: white;
+    }
+    @media (max-width: 767.98px) {
+        .portfolio-slider-wrap {
+            padding: 0;
+        }
+        .portfolio-slider-track {
+            gap: 0 !important;
+        }
+        .ps-mobile-nav {
+            display: flex;
         }
     }
 
@@ -968,22 +1105,70 @@
         color: white;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767.98px) {
         .portfolio-image img {
-            height: 250px;
+            height: 160px;
         }
-        
+
+        .portfolio-content {
+            padding: 1rem;
+        }
+
+        .project-badge {
+            display: none;
+        }
+
+        .project-header {
+            margin-bottom: 0.5rem;
+        }
+
         .project-title {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
         }
-        
+
         .project-description {
-            font-size: 1rem;
-            min-height: auto;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 0.75rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            flex: none;
         }
-        
+
+        .tech-tags {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            gap: 0.5rem;
+            padding-bottom: 0.25rem;
+            margin-top: 0;
+            scrollbar-width: none;
+        }
+
+        .tech-tags::-webkit-scrollbar {
+            display: none;
+        }
+
         .tech-tag {
-            font-size: 0.85rem;
+            font-size: 0.75rem;
+            padding: 0.35rem 0.65rem;
+            flex-shrink: 0;
+        }
+
+        .portfolio-overlay {
+            display: none;
+        }
+
+        .portfolio-showcase:hover {
+            transform: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .portfolio-showcase:hover .portfolio-image img {
+            transform: none;
         }
     }
 
@@ -992,19 +1177,7 @@
         position: relative;
     }
 
-    /* Estilos del carrusel móvil del portfolio */
-    #portfolioCarousel .carousel-item {
-        padding: 0.25rem;
-    }
-    #portfolioCarousel .carousel-control-prev-icon,
-    #portfolioCarousel .carousel-control-next-icon {
-        background-color: rgba(0,0,0,0.55);
-        border-radius: 50%;
-        background-size: 60% 60%;
-    }
-    #portfolioCarousel .carousel-indicators [data-bs-target] {
-        background-color: var(--primary-color);
-    }
+    /* (Bootstrap carousel removed — replaced by custom portfolio slider) */
 
     .highlight-text {
         display: block;

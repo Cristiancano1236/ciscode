@@ -73,13 +73,18 @@ document.addEventListener('DOMContentLoaded', function() {
             'portfolio.subtitle': 'Transformamos ideas en soluciones digitales innovadoras',
             'portfolio.visit': 'Visitar Sitio',
             'portfolio.featured': 'Proyecto Destacado',
+            'portfolio.prev': 'Anterior',
+            'portfolio.next': 'Siguiente',
+            'portfolio.showing_range': 'Mostrando proyectos {from}–{to} de {total}',
             // ECL Fruver — tarjeta en index.html sección #trusted (primer proyecto)
             'portfolio.p1_desc': 'E-commerce B2C para una fruver en Medellín: catálogo, carrito, checkout con domicilios, cuenta de cliente (registro, inicio de sesión con Google, verificación de correo), panel administrativo (productos, pedidos, inventario, reportes) y asistente por chat con IA enlazado al catálogo y al carrito. Incluye protección anti-bots (Cloudflare Turnstile), validación con Zod en API y despliegue sobre Node en servidor con MySQL.',
             // Diálogo — tarjeta en index.html #trusted (tercer proyecto); texto acortado para alinear altura con las otras tarjetas
             'portfolio.p2_desc': 'Plataforma de reservas para centro de encuentros (consultorios, coworking y salones): disponibilidad, paquetes de horas y límites por usuario. Panel con calendario de ocupación, correo, exportación a Excel, carga de archivos y API endurecida (cabeceras, rate limiting y validación). Uso diario en escritorio y móvil; SEO básico en la web pública.',
             // Descripción del proyecto Mindagro
             // Usado en index.html dentro de la sección #trusted (segundo proyecto)
-            'portfolio.p3_desc': 'Mindagro es una plataforma web para gestionar asistencia y productividad en fincas, con fichajes (incluido reconocimiento facial), registro de trabajadores, conteo de cajas y reportes. Su enfoque offline-first permite operar sin internet y sincronizar datos cuando vuelve la conexión, algo clave en zonas rurales.',
+            'portfolio.p3_desc': 'Mindagro es una plataforma web para control de asistencia y registro de jornada en España, pensada para equipos en campo y múltiples centros: fichaje facial, manual o masivo con trazabilidad, geolocalización opcional y conteo de cajas. Panel con gestión de empleados, reportes por día/semana/mes, exportación a Excel e integración con NOMINASOL (Software DELSOL). PWA offline-first para operar sin internet y sincronizar al volver la conexión; roles y permisos por empresa.',
+            // Casa Blanca Control — tarjeta en index.html #trusted (cuarto proyecto)
+            'portfolio.p4_desc': 'Plataforma multi-empresa para parqueaderos: ingreso/salida de vehículos, tarifas por minuto/hora/día, mensualidades y pagos (efectivo, tarjeta y QR). Panel con dashboard, turnos de caja, gestión de usuarios y reportes en Excel. Control de acceso con JWT, anti-bots con Cloudflare Turnstile y despliegue en AWS EC2 con Nginx y MySQL.',
             // Etiqueta para botón cuando la demo es privada o sin URL pública
             'portfolio.private': 'Demo privada',
             'brand.tagline': 'Desarrollo Web Profesional',
@@ -179,13 +184,18 @@ document.addEventListener('DOMContentLoaded', function() {
             'portfolio.subtitle': 'We turn ideas into innovative digital solutions',
             'portfolio.visit': 'Visit Site',
             'portfolio.featured': 'Featured Project',
+            'portfolio.prev': 'Previous',
+            'portfolio.next': 'Next',
+            'portfolio.showing_range': 'Showing projects {from}–{to} of {total}',
             // ECL Fruver — card in index.html #trusted (first project)
             'portfolio.p1_desc': 'B2C e-commerce for a fruit and vegetable store in Medellín: catalog, cart, checkout with home delivery, customer account (registration, Google sign-in, email verification), admin panel (products, orders, inventory, reports), and an AI chat assistant linked to the catalog and cart. Includes anti-bot protection (Cloudflare Turnstile), Zod validation on the API, and deployment on a Node server with MySQL.',
             // Diálogo — card in index.html #trusted (third project); shortened copy to match sibling card heights
             'portfolio.p2_desc': 'Booking platform for a meeting center (consulting rooms, coworking, and group spaces): availability, hour packages, and per-user limits. Admin panel with occupancy calendar, email, Excel export, file uploads, and a hardened API (headers, rate limiting, validation). Daily use on desktop and mobile; basic SEO on the public site.',
             // Mindagro description in English
             // Used in index.html #trusted (second project)
-            'portfolio.p3_desc': 'Mindagro is a web platform to manage attendance and field productivity for farms, including check-ins (with facial recognition), worker records, box counting, and reporting. Its offline-first approach keeps operations running without internet and syncs data when connectivity returns, which is critical in rural areas.',
+            'portfolio.p3_desc': 'Mindagro is a web platform for attendance tracking and workday registration in Spain, built for field teams and multiple work sites: facial, manual, or bulk check-ins with full traceability, optional geolocation, and box counting. Admin panel with employee management, day/week/month reports, Excel export, and NOMINASOL (Software DELSOL) integration. Offline-first PWA to keep working without internet and sync when connectivity returns; company roles and permissions.',
+            // Casa Blanca Control — card in index.html #trusted (fourth project)
+            'portfolio.p4_desc': 'Multi-company parking lot platform: vehicle check-in/out, rates by minute/hour/day, monthly subscriptions and payments (cash, card and QR). Dashboard with cashier shifts, user management and Excel reports. JWT access control, anti-bot protection with Cloudflare Turnstile and deployment on AWS EC2 with Nginx and MySQL.',
             // Label when demo is private/unavailable
             'portfolio.private': 'Private demo',
             'brand.tagline': 'Professional Web Development',
@@ -237,6 +247,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 el.textContent = value;
             }
         });
+
+        document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+            const key = el.getAttribute('data-i18n-aria');
+            const value = dict[key];
+            if (value) el.setAttribute('aria-label', value);
+        });
+
+        if (typeof window.refreshPortfolioSlider === 'function') {
+            window.refreshPortfolioSlider();
+        }
     }
 
     // Apply saved language or default to ES
@@ -345,6 +365,189 @@ document.addEventListener('DOMContentLoaded', function() {
             behavior: 'smooth'
         });
     });
+
+    // ── Portfolio Slider ──
+    (function () {
+        const viewport = document.getElementById('portfolioViewport');
+        const track    = document.getElementById('portfolioTrack');
+        if (!track || !viewport) return;
+
+        const PORTFOLIO_URLS = [
+            'https://eclfruver.com/',
+            'https://mind-agro.com/',
+            'https://dialogoencuentro.com/',
+            'https://casablancacontrol.com/'
+        ];
+
+        const slides = Array.from(track.querySelectorAll('.portfolio-slide'));
+        const total  = slides.length;
+        let current  = 0;
+
+        function isMobile()     { return window.innerWidth < 768; }
+        function visibleCount() { return isMobile() ? 1 : 3; }
+        function maxIdx()       { return Math.max(0, total - visibleCount()); }
+        const GAP_DESKTOP = 24; // 1.5rem
+
+        function getLangDict() {
+            const lang = localStorage.getItem('site_lang') || 'es';
+            return translations[lang] || translations.es;
+        }
+
+        function applySlideWidths() {
+            const vpW  = viewport.offsetWidth;
+            const vis  = visibleCount();
+            const gap  = isMobile() ? 0 : GAP_DESKTOP;
+            const sw   = (vpW - (vis - 1) * gap) / vis;
+            track.style.gap = gap + 'px';
+            slides.forEach(s => {
+                s.style.width      = sw + 'px';
+                s.style.flexBasis  = sw + 'px';
+                s.style.flexShrink = '0';
+                s.style.flexGrow   = '0';
+            });
+        }
+
+        function getOffset(idx) {
+            const vpW = viewport.offsetWidth;
+            const vis = visibleCount();
+            const gap = isMobile() ? 0 : GAP_DESKTOP;
+            const sw  = (vpW - (vis - 1) * gap) / vis;
+            return idx * (sw + gap);
+        }
+
+        function updateDots() {
+            document.querySelectorAll('.ps-dots-mobile .ps-dot').forEach(dot => {
+                const idx = parseInt(dot.getAttribute('data-idx'), 10);
+                dot.classList.toggle('active', idx === current);
+            });
+        }
+
+        function updateTabs() {
+            document.querySelectorAll('.ps-tab').forEach(tab => {
+                const idx = parseInt(tab.getAttribute('data-project-idx'), 10);
+                const isActive = idx === current;
+                tab.classList.toggle('active', isActive);
+                tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+            });
+        }
+
+        function updateRange() {
+            const rangeEl = document.getElementById('psRange');
+            if (!rangeEl || isMobile()) return;
+            const dict = getLangDict();
+            const template = dict['portfolio.showing_range'] || 'Mostrando proyectos {from}–{to} de {total}';
+            const from = current + 1;
+            const to = Math.min(current + visibleCount(), total);
+            rangeEl.textContent = template
+                .replace('{from}', from)
+                .replace('{to}', to)
+                .replace('{total}', total);
+        }
+
+        function updatePeekHint() {
+            if (isMobile()) {
+                viewport.classList.remove('has-more');
+                return;
+            }
+            viewport.classList.toggle('has-more', current < maxIdx());
+        }
+
+        function updateArrows() {
+            const atStart = current === 0;
+            const atEnd   = current >= maxIdx();
+            ['psPrev', 'psPrevMobile'].forEach(id => {
+                const btn = document.getElementById(id);
+                if (btn) btn.disabled = atStart;
+            });
+            ['psNext', 'psNextMobile'].forEach(id => {
+                const btn = document.getElementById(id);
+                if (btn) btn.disabled = atEnd;
+            });
+        }
+
+        function updateVisitLink() {
+            const visitBtn = document.getElementById('psVisitBtn');
+            if (visitBtn && PORTFOLIO_URLS[current]) {
+                visitBtn.href = PORTFOLIO_URLS[current];
+            }
+        }
+
+        function goTo(idx) {
+            current = Math.max(0, Math.min(idx, maxIdx()));
+            track.style.transform = 'translateX(-' + getOffset(current) + 'px)';
+            updateDots();
+            updateTabs();
+            updateRange();
+            updatePeekHint();
+            updateArrows();
+            updateVisitLink();
+        }
+
+        function goToProject(projectIdx) {
+            goTo(Math.min(projectIdx, maxIdx()));
+        }
+
+        function refreshUI() {
+            updateTabs();
+            updateRange();
+            updatePeekHint();
+        }
+
+        window.refreshPortfolioSlider = refreshUI;
+
+        applySlideWidths();
+        goTo(0);
+
+        const prevDesktop = document.getElementById('psPrev');
+        const nextDesktop = document.getElementById('psNext');
+        const prevMobile  = document.getElementById('psPrevMobile');
+        const nextMobile  = document.getElementById('psNextMobile');
+
+        if (prevDesktop) prevDesktop.addEventListener('click', () => goTo(current - 1));
+        if (nextDesktop) nextDesktop.addEventListener('click', () => goTo(current + 1));
+        if (prevMobile)  prevMobile.addEventListener('click',  () => goTo(current - 1));
+        if (nextMobile)  nextMobile.addEventListener('click',  () => goTo(current + 1));
+
+        document.querySelectorAll('.ps-dots-mobile .ps-dot').forEach(dot => {
+            dot.addEventListener('click', () => goTo(parseInt(dot.getAttribute('data-idx'), 10)));
+        });
+
+        document.querySelectorAll('.ps-tab').forEach(tab => {
+            tab.addEventListener('click', () => goToProject(parseInt(tab.getAttribute('data-project-idx'), 10)));
+        });
+
+        const sliderWrap = document.querySelector('.portfolio-slider-wrap');
+        if (sliderWrap) {
+            sliderWrap.addEventListener('keydown', e => {
+                if (isMobile()) return;
+                if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    goTo(current - 1);
+                } else if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    goTo(current + 1);
+                }
+            });
+        }
+
+        // Swipe táctil
+        let tsX = 0;
+        viewport.addEventListener('touchstart', e => { tsX = e.touches[0].clientX; }, { passive: true });
+        viewport.addEventListener('touchend',   e => {
+            const diff = tsX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 50) goTo(current + (diff > 0 ? 1 : -1));
+        });
+
+        window.addEventListener('resize', () => {
+            applySlideWidths();
+            goTo(Math.min(current, maxIdx()));
+        });
+
+        window.addEventListener('load', () => {
+            applySlideWidths();
+            goTo(Math.min(current, maxIdx()));
+        });
+    })();
 
     // WhatsApp floating message
     setTimeout(function() {
