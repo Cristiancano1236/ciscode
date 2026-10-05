@@ -49,8 +49,27 @@
   }
 }
 
+@keyframes caret-blink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.typing-caret {
+  animation: caret-blink 1s steps(1) infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .typing-caret {
+    animation: none;
   }
 }
