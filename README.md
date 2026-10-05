@@ -1,74 +1,25 @@
-# 🚀 Ciscode - Desarrollo Web Profesional
+# Ciscode
 
-[![Sitio Web](https://img.shields.io/badge/Website-Ciscode-63CBD6?style=for-the-badge)](https://github.com/Cristiancano1236/ciscode)
-[![YouTube](https://img.shields.io/badge/YouTube-@Ciscodedev-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/@Ciscodedev)
+Sitio de Cristian Cano / Ciscode: desarrollo web profesional, portafolio y canal de YouTube.
 
-Sitio web profesional que ofrece servicios de desarrollo web, construido con tecnologías modernas y enfocado en rendimiento y experiencia de usuario.
+Construido con el mismo stack de frontend que Mindagro:
 
-## ✨ Características
+- React 18
+- TypeScript
+- Vite
+- Tailwind CSS
+- shadcn/ui (Radix + variables CSS)
+- Framer Motion
 
-- 🎨 Diseño moderno y responsivo
-- 🌐 Soporte multilenguaje (ES/EN)
-- ⚡ Alto rendimiento y optimización SEO
-- 📱 Compatible con todos los dispositivos
-- 🔒 Certificado SSL incluido
+## Scripts
 
-## 🛠️ Tecnologías
+```bash
+npm install
+npm run dev
+npm run build
+npm run lint
+```
 
-- HTML5
-- CSS3 & Bootstrap 5
-- JavaScript
-- Font Awesome Icons
-- Google Fonts
+## Idiomas
 
-## 🌟 Servicios
-
-1. **Sitios Web**
-   - Diseño Responsivo
-   - Optimización SEO
-   - Rendimiento Optimizado
-   - Diseño UX/UI
-
-2. **Aplicaciones Web**
-   - Single Page Applications
-   - APIs RESTful
-   - Base de Datos
-   - Autenticación Segura
-
-3. **E-commerce**
-   - Carrito de Compras
-   - Pasarelas de Pago
-   - Gestión de Inventario
-   - Panel Administrativo
-
-## 📱 Redes Sociales
-
-- [YouTube](https://www.youtube.com/@Ciscodedev)
-- [Instagram](https://www.instagram.com/cristiancano1236)
-- [TikTok](https://www.tiktok.com/@ciscodedev)
-- [GitHub](https://github.com/Cristiancano1236)
-
-## 📞 Contacto
-
-- WhatsApp: [+57 300 695 7308](https://wa.me/573006957308)
-- Email: cristiancano1236@gmail.com
-
-## 🌐 Stack Tecnológico
-
-- Frontend: HTML5, CSS3, JavaScript
-- Frameworks: React, Vue.js, Angular
-- UI Frameworks: Bootstrap, Vuetify
-- Backend: Node.js, Express.js, Laravel
-- Bases de Datos: MySQL, MongoDB
-- CMS: WordPress, Shopify
-
-## 🚀 Proyectos Destacados
-
-### LogMe
-Sistema de reconocimiento facial para control de acceso y asistencia con autenticación biométrica en tiempo real.
-
-### Diálogo
-Plataforma de reserva de espacios con sistema de gestión completo, incluyendo reservas online y panel administrativo.
-
----
-Desarrollado con 💙 por [Cristian Cano](https://github.com/Cristiancano1236)
+El sitio cambia entre español e inglés. La preferencia queda en `localStorage` (`site_lang`).

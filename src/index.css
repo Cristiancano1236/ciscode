@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Paleta del logo, en claro:
+  - Turquesa #63CBD6
+  - Pizarra #41474A
+  - Crema #F7F4EE
+*/
+@layer base {
+  :root {
+    --background: 40 37% 95%;
+    --foreground: 200 8% 27%;
+    --card: 0 0% 100%;
+    --card-foreground: 200 8% 27%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 8% 27%;
+    --primary: 186 58% 61%;
+    --primary-foreground: 200 14% 16%;
+    --secondary: 40 28% 91%;
+    --secondary-foreground: 200 8% 27%;
+    --muted: 40 22% 92%;
+    --muted-foreground: 200 6% 38%;
+    --accent: 186 42% 88%;
+    --accent-foreground: 200 14% 16%;
+    --border: 36 16% 84%;
+    --input: 36 16% 84%;
+    --ring: 186 58% 48%;
+    --radius: 1.25rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    min-height: 100vh;
+  }
+
+  ::selection {
+    background: #63cbd6;
+    color: #243033;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
